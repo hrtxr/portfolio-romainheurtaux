@@ -1,0 +1,201 @@
+@font-face {
+    font-family: 'Stara-Medium';
+    src: url('fonts/Stara-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Modius';
+    src: url('fonts/Modius.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ModiusBld';
+    src: url('fonts/Modius\ Bold.ttf') format('truetype');
+}
+
+/* Display */
+body {
+    background-color: rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
+    font-family: Stara-Medium;
+}
+
+.boite {
+    position: absolute; /* Corrige la position pour éviter le décalage */
+    bottom: 0; /* Aligné en bas de la fenêtre */
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alignement à gauche */
+}
+
+.rom {
+    font-family: Modius;
+    color: white;
+    letter-spacing: 10px;
+    font-size: 10vw;
+    margin-bottom: -3.5vw;
+    transition: color 0.3s ease, transform 0.3s ease;
+    z-index: 2;
+}
+.rom:hover{
+    color: rgb(171, 75, 255);
+}
+
+.name {
+    font-family: ModiusBld;
+    color: white;
+    font-size: 10.5vw;
+    z-index: 0;
+}
+.name:hover{
+    color: rgb(171, 75, 255);
+}
+.name-mobile {
+    display: none;
+}
+
+
+.navbar{
+    display: fixed;
+    position: fixed;
+    color:white;
+    top : 0;
+    font-family: Stara-Medium;
+    font-size: 50px;
+    margin: 1% 0% 0% 2%;
+    transition: color 0.3s ease, transform 0.3s ease;
+    z-index: 10;
+}
+.navbar:hover {
+    color: #5900ff; 
+    font-family: Stara-Medium;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+
+.menu{
+    display: none; /* Masqué par défaut */
+    position: fixed;   
+    right: 0; 
+    padding: 2% 2% 0% 0%;
+    color:white;
+    font-family: Stara-Medium;
+    font-size: 30px;
+    text-decoration: none;
+}
+.menu.show {
+    display: block; /* Affiché lorsque la classe 'show' est ajoutée */
+}
+.menu a{
+    color:white;
+    padding: 10px 40px;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.menu a:hover{
+    color: #5900ff;
+}
+
+.pfio{
+    display: flex;
+    position: absolute;
+    top:0;
+    right:0 ;
+    z-index: 2;
+    color: rgb(255, 255, 255);
+    padding-top: 100px;
+    font-size: 7vw;
+}
+
+.gfx1{
+    display: flex;
+    position: relative;
+    z-index: -1;
+    animation: rotate 120s linear infinite;
+    filter: hue-rotate(120deg);
+    padding-top: 7%;
+    right:0;
+}
+
+@media (max-width: 1200px) {
+    .name {
+        display: none; /* Cache le texte original */
+    }
+    .name-mobile {
+        display: flex;
+        font-family: ModiusBld;
+        color: white;
+        font-size: 19vw;
+        margin: 0% 0% 0% 0%;
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+
+    .menu {
+        padding: 5px 0; /* Réduire le padding du menu */
+    }
+    .menu a {
+        padding: 5px 10px;
+        font-size: 4vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .rom {
+        font-size: 8vw;
+        margin-bottom: -2.5vw;
+    }
+
+    .name {
+        font-size: 8.5vw;
+    }
+
+    .navbar {
+        font-size: 40px;
+        margin: 2% 0% 0% 2%;
+    }
+
+    .menu a {
+        font-size: 5vw;
+    }
+
+    .pfio {
+        font-size: 6vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .rom {
+        font-size: 6vw;
+        margin-bottom: -1.5vw;
+    }
+
+    .name {
+        font-size: 6.5vw;
+    }
+
+    .navbar {
+        font-size: 30px;
+        margin: 3% 0% 0% 2%;
+    }
+
+    .menu a {
+        font-size: 6vw;
+    }
+
+    .pfio {
+        font-size: 5vw;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,38 @@
+/* ############################ */
+/* #### IMPORT DES POLICES #### */
+/* ############################ */
+/* Stara- Medium */
+@font-face {
+    font-family: 'Stara-Medium';
+    src: url('../Graphical elements/fonts/Stara-Medium.ttf') format('truetype');
+}
+
+/* #################### */
+/* #### STYLESHEET #### */
+/* #################### */
+
+/*body & html*/
+body{
+    background-color: black ;
+    font-family: Stara-Medium;
+}
+
+.fourofor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(to bottom right,rgb(0, 0, 0), rgb(24, 18, 29));
+}
+
+.mactouttriste{
+    filter: invert(100%);
+    height: 5vw;
+    width: 5vw;
+}
+
+.txt{
+    color:white;
+    text-size:3vw;
+}

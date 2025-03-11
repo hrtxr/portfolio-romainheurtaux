@@ -1,0 +1,525 @@
+/* ############################ */
+/* #### IMPORT DES POLICES #### */
+/* ############################ */
+/* Stara- Medium */
+@font-face {
+    font-family: 'Stara-Medium';
+    src: url('Graphical elements/fonts/Stara-Medium.ttf') format('truetype');
+}
+/* Modius */
+@font-face {
+    font-family: 'Modius';
+    src: url('Graphical elements/fonts/Modius.ttf') format('truetype');
+}
+/* ModiusBld */
+@font-face {
+    font-family: 'ModiusBld';
+    src: url('Graphical elements/Fonts/Modius Bold.ttf') format('truetype');
+}
+
+/* #################### */
+/* #### STYLESHEET #### */
+/* #################### */
+
+/*body & html*/
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+html{
+    justify-content: flex;
+    flex-direction: column;
+    background-color: black;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+/* Header */
+.bg{
+    justify-content: flex;
+    position: fixed;
+    height: 21vh;
+    width: 100vw;
+    max-width: 100%;
+    z-index: 2;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    -webkit-mask-image: linear-gradient(to bottom,black 10%,transparent 100%);
+}
+.header{
+    position: fixed;
+    top: 0;
+    height: 14vh;
+    width: 100vw;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+.header img{
+    width: 7vh;
+    height: 7vh;
+    z-index: 2;
+    align-self: flex-start;
+    padding: 1% 1% 1% 1%;
+    transition: transform 0.3s ease;
+}
+.header img:hover{
+    transform: rotate(90deg);
+}
+
+/* Menu */
+.menu {
+    font-family: Stara-Medium;
+    display: none; 
+    position: absolute;
+    top: 10vh; 
+    width: 100%;
+    text-align: center;
+    z-index: 9;
+    text-shadow: rgb(0, 0, 0) 0px 0 2px;
+    transition: all 0.3s ease;
+}
+.header:hover .menu {
+    display: block; 
+    transition: all 0.3s ease;
+}
+.menu a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    backdrop-filter: blur(2px);
+    transition: all 0.3s ease;
+}
+.menu a:hover {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    color: rgb(171, 75, 255);
+    box-shadow: 0px 0px 30px black;
+    transition: all 0.3s ease;
+}
+
+/* Landing */
+.landing{
+    justify-content: flex;
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.Romain{
+    color: white;
+    font-family: Modius;
+    font-size: 10vw;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    bottom: 8vw;
+    transition: color 0.3s ease, transform 0.3s ease;
+    z-index: 1;
+}
+.Romain:hover{
+    color: rgb(171, 75, 255);
+}
+
+.Heurtaux{
+    color: white;
+    font-family: ModiusBld;
+    font-size: 10.5vw;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    transition: color 0.3s ease, transform 0.3s ease;
+    z-index: 1;
+}
+.Heurtaux:hover{
+    color: rgb(171, 75, 255);
+}
+
+.pfio{
+    justify-content: flex;
+    position: absolute;
+    right: 0;
+    color: white;
+    font-family: Stara-Medium;
+    font-size: 5vw;
+    top: 10vw;
+    z-index: 1;
+}
+
+.logo{
+    justify-content: flex;
+    animation: rotate 120s linear infinite;
+    z-index: -1;
+}
+
+/* A propos */
+.content{
+    z-index: 1;
+    justify-content: flex;
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    max-height: 100%;
+    background-image: linear-gradient(to bottom right,rgb(255, 255, 255), rgb(195, 126, 255));
+    z-index: 1;
+    overflow: hidden;
+}
+
+.apropos{
+    justify-content: flex;
+    position: absolute;
+    right: 0;
+    color: rgb(0, 0, 0);
+    font-family: Stara-Medium;
+    font-size: 5vw;
+    top: 5vw;
+    z-index: 1;
+    align-items: center;
+}
+
+.aproposmoi{
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center; 
+    width: 50%; 
+    margin:5vw;
+    color: rgb(0, 0, 0);
+    font-family: Stara-Medium;
+    font-size: 1.5vw;
+    text-align: justify;
+}
+
+.logo2{
+    position: absolute;
+    right: -50%;
+    size: 10vw;
+    transform: translate(-50%, -50%);
+    animation: rotate 120s linear infinite;
+    z-index: -1;
+    overflow-x: hidden;
+}
+
+/* Bandeau de compétences */
+.bandeaucompetences {
+    width: 100%;
+    background-color: rgb(171, 75, 255); /* Couleur de fond du bandeau */
+    color: #fff; /* Couleur du texte */
+    font-family: Modiusbld;
+    font-size: 4vw;
+    overflow: hidden;
+    padding: 0; /* Supprimez le padding */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+.bandeaucompetences p:hover {
+    color: rgb(0, 89, 255);
+    transition: all 0.3s ease;
+}
+
+.liste1, .liste2{
+    display: flex;
+    padding-left: 4.8rem;
+    width: max-content;
+    padding: 0; 
+    margin: 0;
+    animation: scroll1 var(--speed, 30s) linear infinite;
+    padding: 0px;
+}
+.liste1{
+    margin-top:2.25vh;
+}
+.liste2 {
+    animation: scroll2 var(--speed, 30s) linear infinite;
+}
+.liste1 p, .liste2 p {
+    margin: 0;
+    padding: 0;
+}
+
+
+@keyframes scroll1{ 
+    to {transform: translateX(-50%);}
+}
+@keyframes scroll2{
+    from {transform: translateX(-50%);} 
+    to {transform: translateX(00%);}
+}
+
+/* A projects */
+.content2{
+    background-image: linear-gradient(to bottom right,rgb(0, 0, 0), rgb(12, 32, 69));
+    justify-content: flex;
+    position: relative;
+    display: flex;
+    width: 100vw;
+    max-width: 100%;
+    z-index: 1;
+    overflow-x: hidden;
+}
+
+.projets{
+    position: absolute;
+    right: 0;
+    color: rgba(255, 255, 255, 50);
+    font-family: Stara-Medium;
+    font-size: 5vw;
+    top: 5vw;
+    z-index: 1;
+    align-items: center;
+}
+
+.cardcontainer{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100vw;
+    margin-top: 14vw;
+}
+.card{
+    -webkit-backdrop-filter: blur(20px);
+    width: 40vw;
+    height: 50vh;
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+    margin-left: 2.5vh;
+    margin-right: 2.5vh;
+    box-shadow: 0px 0px 30px black;
+    transition: all 0.3s ease;
+    color: white;
+    border-radius: 1%;
+}
+.card:hover{
+    -webkit-backdrop-filter: blur(50%);
+    width: 42vw;
+    height: 52vh;
+    margin: 5vh;
+    box-shadow: 0px 0px 60px black;
+}
+
+.ctitle{
+    display: flex;
+    font-family: Stara-Medium;
+    margin-left: 10%;
+    font-size: 3vw;
+    transition: font-size 0.3s ease;
+}
+.card:hover .ctitle{
+    font-size: 3.5vw;
+}
+
+.sub {
+    font-family: Stara-Medium;
+    margin-left:10%;
+    font-size: 2vw;
+    padding-right: 10%;
+    padding-bottom: 10%;
+}
+
+/* Contact */
+
+.content3{
+    background-image: linear-gradient(to bottom right,rgb(0, 0, 0), rgb(36, 0, 67));
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    max-width: 100%;
+    height: 100vh;
+    z-index: 1;
+    overflow-x: hidden;
+    color:white;
+    font-family: Stara-Medium;
+}
+
+.headercontact{
+    /*font-family: Modius;*/
+    font-size: 6vw;
+    text-align: center;
+    line-height: 0.9;
+    background: linear-gradient(90deg,#ffffff, #ffffff, #ffffff, rgb(171, 75, 255), #ffffff, rgb(0, 89, 255), #ffffff,#ffffff, #ffffff);
+    background-size: 500%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 8s linear infinite;
+}
+
+.historybutton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2vw;
+    text-align: center;
+    -webkit-backdrop-filter: blur(20px);
+    color: white;
+    height: 3.5vw; 
+    box-shadow: 0px 0px 30px rgb(0, 0, 0);
+    border-radius: 1vw;
+    background-color: rgba(255, 255, 255, 5%);
+    font-size: 1.5vw;
+    transition: all 0.3s ease;
+}
+.historybutton:hover{
+    background-color: rgba(255, 255, 255, 10%);
+    box-shadow: 0px 0px 30px rgb(171, 75, 255);
+    font-size: 1.7vw;
+    transition: all 0.2s ease;
+}
+
+.historybuttontext{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Stara-Medium;
+    
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+/* Bas de page */
+.content4{
+    background-color: black;
+    justify-content: flex;
+    position: relative;
+    width: 100vw;
+    max-width: 100%;
+    /*height: 50vh;*/
+    max-height: 50%;
+    z-index: 1;
+    overflow-x: hidden;
+    color:rgb(176, 176, 176);
+    font-family: Stara-Medium;
+    list-style-type: none;
+    font-size: 0.9vw;
+}
+
+.divider{
+    display: flex;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    background-color: white;
+    height: 0.1vh;
+}
+
+.headtext{
+    position: relative;
+    left: 0;
+    color: rgb(176, 176, 176);
+    font-family: Stara-Medium;
+    font-size: 1.5vw;
+    top: 1vh;
+    left: 2.5vw;
+    z-index: 1;
+} 
+
+.labellistfoot{
+    display: flex;
+    justify-content: flex;
+    width: 100vw;
+    margin-top: 3vh;
+    padding-left: 4vw;
+    margin-bottom: -0.25vh;
+}
+
+.listfooter{
+    display: flex;
+    flex-direction: column;
+    width: 100vw; 
+    margin-bottom: 0vh;
+    font-style: italic;
+}
+.listfooter ul {
+    margin: 0.5vh 0;
+    padding: 0.2vh 0 5;
+}
+.listfooter a{
+    color: rgb(176, 176, 176);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-decoration-line: underline;
+}
+.listfooter a:hover{
+    color: rgb(171, 75, 255);
+}
+
+.linkedin{
+    position: absolute; 
+    top: 10vh; 
+    right: 3vh;
+    display: flex;
+    justify-content: flex;
+    width: 3vw;
+    font-size: 1.5vh;
+    filter: drop-shadow(0px 0px 0px rgb(171, 75, 255));
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+.linkedin:hover{
+    filter: drop-shadow(0px 0px 10px rgb(171, 75, 255));
+    width: 3.1vw;
+}
+
+.github{
+    position: absolute; 
+    top: 3vh; 
+    right: 3vh;
+    display: flex;
+    justify-content: flex;
+    width: 3vw;
+    font-size: 1.5vh;
+    filter: drop-shadow(0px 0px 0px rgb(171, 75, 255));
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+.github:hover{
+    filter: drop-shadow(0px 0px 10px rgb(171, 75, 255));
+    width: 3.1vw;
+}
+
+.copiryghtandco{
+    display: flex;
+    justify-content: flex-end;
+    width: 100vw;
+    margin-top: 1vh;
+    margin-bottom: 0vh;
+    padding-right: 5vw;
+    bottom: 0;
+    font-size: 1.5vh;
+}
+
+/* ################### */
+/* #### Keyframes #### */
+/* ################### */
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes glow {
+    0% {
+        background-position: 100% 0%;
+    } 100% {
+        background-position: 0% 0%;
+    }
+}
