@@ -39,6 +39,10 @@ html{
     box-sizing: border-box;
     max-width: 100%;
 }
+html a{
+    text-decoration: none;
+}
+
 /* Header */
 .bg{
     justify-content: flex;
@@ -69,6 +73,7 @@ html{
     align-self: flex-start;
     padding: 1% 1% 1% 1%;
     transition: transform 0.3s ease;
+    transition: all 0.3s ease;
 }
 .header img:hover{
     transform: rotate(90deg);
@@ -189,16 +194,35 @@ html{
     align-items: center;
 }
 
+.container{
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+}
+
 .aproposmoi{
     display: flex;
     justify-content: flex-start; 
     align-items: center; 
     width: 50%; 
-    margin:5vw;
+    margin:8vw;
+    margin-left:0vw;
     color: rgb(0, 0, 0);
     font-family: Stara-Medium;
     font-size: 1.5vw;
     text-align: justify;
+}
+
+.pp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    margin: 8vw;
+    border-radius: 1%;
+    box-shadow: 0px 0px 30px black;
 }
 
 .logo2{
@@ -213,20 +237,26 @@ html{
 
 /* Bandeau de compétences */
 .bandeaucompetences {
+    justify-content: flex;
+    position: relative;
     width: 100%;
     background-color: rgb(171, 75, 255); /* Couleur de fond du bandeau */
     color: #fff; /* Couleur du texte */
     font-family: Modiusbld;
     font-size: 4vw;
-    overflow: hidden;
-    padding: 0; /* Supprimez le padding */
+    padding: 0;
     margin: 0;
     display: flex;
     flex-direction: column;
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    text-shadow: 0px 0px 30px black;;
 }
 .bandeaucompetences p:hover {
     color: rgb(0, 89, 255);
     transition: all 0.3s ease;
+    z-index: 1;
 }
 
 .liste1, .liste2{
@@ -287,6 +317,8 @@ html{
     flex-wrap: wrap;
     width: 100vw;
     margin-top: 14vw;
+    position: relative;
+    padding-bottom: 10vw;
 }
 .card{
     -webkit-backdrop-filter: blur(20px);
@@ -300,13 +332,14 @@ html{
     transition: all 0.3s ease;
     color: white;
     border-radius: 1%;
+    
 }
 .card:hover{
     -webkit-backdrop-filter: blur(50%);
     width: 42vw;
     height: 52vh;
     margin: 5vh;
-    box-shadow: 0px 0px 60px black;
+    box-shadow: 0px 0px 60px rgb(8, 47, 118);
 }
 
 .ctitle{
@@ -326,6 +359,47 @@ html{
     font-size: 2vw;
     padding-right: 10%;
     padding-bottom: 10%;
+    bottom: 0;
+    position: relative;
+}
+.seemore{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2vw;
+    text-align: center;
+    color: white;
+    height: 3.5vw; 
+    box-shadow: 0px 0px 30px rgb(0, 0, 0);
+    border-radius: 3%;
+    font-size: 1.5vw;
+    transition: all 0.3s ease;
+    position: absolute;
+    bottom: -5vw;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10%;
+    margin-bottom: 10%;
+    background-color: rgba(255, 255, 255, 5%);
+    -webkit-backdrop-filter: blur(30px);
+}
+.seemore:hover{
+    background-color: rgba(255, 255, 255, 10%);
+    box-shadow: 0px 0px 30px rgb(8, 47, 118);
+    font-size: 1.7vw;
+    transition: all 0.2s ease;
+}
+
+.seemorebuttontext{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Stara-Medium;
+    color: white;
+    text-decoration: none;
+    transition: all 0.1s ease;
+    padding-left: 2vw;
+    padding-right: 2vw;
 }
 
 /* Contact */
@@ -400,7 +474,6 @@ html{
     position: relative;
     width: 100vw;
     max-width: 100%;
-    /*height: 50vh;*/
     max-height: 50%;
     z-index: 1;
     overflow-x: hidden;

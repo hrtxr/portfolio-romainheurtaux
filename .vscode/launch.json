@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Lancer Chrome",
-            "url": "file:///Users/romainheurtaux/Documents/Univ_But_1_Info/12408755/Janvier/Portfolio%20Website/main.html",
+            "url": "file:///Users/romainheurtaux/Documents/Coding/Portfolio%20Website/index.html",
             "webRoot": "${workspaceFolder}"
         }
     ]
