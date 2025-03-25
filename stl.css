@@ -93,6 +93,7 @@ html a{
 }
 .header:hover .menu {
     display: block; 
+    backdrop-filter: blur(2px);
     transition: all 0.3s ease;
 }
 .menu a {
@@ -321,7 +322,6 @@ html a{
     padding-bottom: 10vw;
 }
 .card{
-    -webkit-backdrop-filter: blur(20px);
     width: 40vw;
     height: 50vh;
     margin-bottom: 5vh;
@@ -331,8 +331,8 @@ html a{
     box-shadow: 0px 0px 30px black;
     transition: all 0.3s ease;
     color: white;
-    border-radius: 1%;
-    
+    text-shadow: 0px 0px 5px black; 
+    border-radius: 6%;
 }
 .card:hover{
     -webkit-backdrop-filter: blur(50%);
@@ -340,6 +340,20 @@ html a{
     height: 52vh;
     margin: 5vh;
     box-shadow: 0px 0px 60px rgb(8, 47, 118);
+}
+
+.cportfolio {
+    background-image: url('/Users/romainheurtaux/Documents/Coding/Portfolio Website/Graphical elements/photos/800px-Carapuce_de_Sacha.png');
+}
+.morpyon {
+    background-image: url('/Users/romainheurtaux/Documents/Coding/Portfolio Website/Graphical elements/photos/800px-Carapuce_de_Sacha.png');
+}
+.nsi1 {
+    background-image: url('/Users/romainheurtaux/Documents/Coding/Portfolio Website/Graphical elements/photos/800px-Carapuce_de_Sacha.png');
+
+}
+.nsi2 {
+    background-image: url('/Users/romainheurtaux/Documents/Coding/Portfolio Website/Graphical elements/photos/800px-Carapuce_de_Sacha.png');
 }
 
 .ctitle{
@@ -361,6 +375,7 @@ html a{
     padding-bottom: 10%;
     bottom: 0;
     position: relative;
+    margin-bottom: 0px;
 }
 .seemore{
     display: flex;

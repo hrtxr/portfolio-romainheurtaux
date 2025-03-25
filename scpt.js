@@ -5,7 +5,6 @@ function toggleMenu() {
 
 
 /// 3D Card Effect
-
 document.querySelectorAll('.card').forEach(card => {
     card.addEventListener('mousemove', function(e) {
         const cardRect = card.getBoundingClientRect();
