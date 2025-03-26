@@ -321,7 +321,7 @@ html a{
     position: relative;
     padding-bottom: 10vw;
 }
-.card{
+.card {
     width: 40vw;
     height: 50vh;
     margin-bottom: 5vh;
@@ -331,29 +331,30 @@ html a{
     box-shadow: 0px 0px 30px black;
     transition: all 0.3s ease;
     color: white;
-    text-shadow: 0px 0px 5px black; 
+    text-shadow: 0px 0px 5px rgb(151, 32, 255);
     border-radius: 6%;
-}
-.card:hover{
-    -webkit-backdrop-filter: blur(50%);
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    }
+.card:hover {
     width: 42vw;
     height: 52vh;
     margin: 5vh;
-    box-shadow: 0px 0px 60px rgb(8, 47, 118);
+    box-shadow: 10px 0px 60px rgb(8, 47, 118);
 }
 
 .cportfolio {
-    background-image: url('/Users/romainheurtaux/Documents/Coding/Portfolio Website/Graphical elements/photos/800px-Carapuce_de_Sacha.png');
+    background-image: url('/Users/romainheurtaux/Documents/Coding/Portfolio Website/Graphical elements/photos/PortfolioWbst.JPG');
 }
 .morpyon {
-    background-image: url('/Users/romainheurtaux/Documents/Coding/Portfolio Website/Graphical elements/photos/800px-Carapuce_de_Sacha.png');
+    background-image: url('/Users/romainheurtaux/Documents/Coding/Portfolio Website/Graphical elements/photos/Morpy0n.JPG');
 }
 .nsi1 {
-    background-image: url('/Users/romainheurtaux/Documents/Coding/Portfolio Website/Graphical elements/photos/800px-Carapuce_de_Sacha.png');
-
+    background-image: url('/Users/romainheurtaux/Documents/Coding/Portfolio Website/Graphical elements/photos/Chifumi.JPG');
 }
 .nsi2 {
-    background-image: url('/Users/romainheurtaux/Documents/Coding/Portfolio Website/Graphical elements/photos/800px-Carapuce_de_Sacha.png');
+    background-image: url('/Users/romainheurtaux/Documents/Coding/Portfolio Website/Graphical elements/photos/ProjetMobilite.JPG');
 }
 
 .ctitle{
