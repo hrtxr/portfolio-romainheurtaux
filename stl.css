@@ -112,6 +112,25 @@ html a{
     transition: all 0.3s ease;
 }
 
+@media screen and (max-width: 1000px) {
+    .header img{
+        width: 8vh;
+        height: 8vh;
+    }
+    .menu {
+        top: 11vh;
+    } 
+}
+@media screen and (max-width: 750px) {
+    .header img{
+        width: 9vh;
+        height: 9vh;
+    }
+    .menu {
+        top: 12vh;
+    } 
+}
+
 /* Landing */
 .landing{
     justify-content: flex;
@@ -151,6 +170,21 @@ html a{
     color: rgb(171, 75, 255);
 }
 
+.Heurtaux-mobile {
+    color: white;
+    font-family: ModiusBld;
+    font-size: 10.5vw;
+    width: 100%;
+    display: none;
+    position: absolute;
+    bottom: 0;
+    transition: color 0.3s ease, transform 0.3s ease;
+    z-index: 1;
+}
+.Heurtaux-mobile:hover{
+    color: rgb(171, 75, 255);
+}
+
 .pfio{
     justify-content: flex;
     position: absolute;
@@ -166,6 +200,39 @@ html a{
     justify-content: flex;
     animation: rotate 120s linear infinite;
     z-index: -1;
+}
+
+@media screen and (max-width: 1000px) {
+    .Romain{
+        font-size: 18vw;
+        bottom: 6vw;
+    }
+    .pfio{
+        font-size: 8vw;
+        top: 15vw;
+    }
+}
+@media screen and (max-width: 750px) {
+    .Romain{
+        font-size: 18vw;
+        bottom: 28vw;
+    }
+    .Heurtaux {
+        display: none; /* Cache le texte original */
+    }
+    .Heurtaux-mobile {
+        display: flex;
+        font-family: ModiusBld;
+        color: white;
+        font-size: 19vw;
+        margin: 0% 0% 0% 0%;
+        transition: color 0.3s ease, transform 0.3s ease;
+        line-height: 0.8;
+    }
+    .pfio{
+        font-size: 12vw;
+        top: 18vw;
+    }
 }
 
 /* A propos */
@@ -236,6 +303,73 @@ html a{
     overflow-x: hidden;
 }
 
+@media screen and (max-width: 1000px) {
+    .container{
+        justify-content: center;
+    }
+    .apropos{
+        font-size: 12vw;
+        top: 10vw;
+    }
+    .pp{
+        align-items: center;
+        width: 50vw; 
+        height: auto;
+        margin-top: 31vw;
+    }
+    .aproposmoi {
+        font-size: 2vw;
+        margin: 0vw; 
+        margin-bottom: 5vw;
+        margin-top: 31vw;
+        text-align: center; 
+    }
+}
+@media screen and (max-width: 750px) {
+    .container {
+        flex-direction: column; /* Arrange items in a column */
+        align-items: center; /* Center items horizontally */
+        justify-content: center; /* Center items vertically */
+    }
+    .apropos {
+        font-size: 12vw;
+        top: 5vw;
+        text-align: center;
+    }
+    .pp {
+        width: 30vw;
+        height: auto;
+        margin-top: 31vw;
+        margin-bottom: 1vw;
+    }
+    .aproposmoi {
+        margin: 0vw; 
+        width: 90vw;
+        margin-bottom: 5vw;
+        margin-top: 5vw;
+        text-align: center; 
+        font-size: 2.5vw;
+    }
+}
+@media screen and (max-width: 500px) {
+    .apropos {
+        top: 15vw;
+    }
+    .pp {
+        width: 30vw;
+        height: auto;
+        margin-top: 5vw;
+        margin-bottom: 1vw;
+    }
+    .aproposmoi {
+        margin: 0vw; 
+        width: 90vw;
+        margin-bottom: 5vw;
+        margin-top: 5vw;
+        text-align: center; 
+        font-size: 3vw;
+    }
+}
 /* Bandeau de compétences */
 .bandeaucompetences {
     justify-content: flex;
@@ -280,17 +414,8 @@ html a{
     padding: 0;
 }
 
-
-@keyframes scroll1{ 
-    to {transform: translateX(-50%);}
-}
-@keyframes scroll2{
-    from {transform: translateX(-50%);} 
-    to {transform: translateX(00%);}
-}
-
 /* A projects */
-.content2{
+.content2 {
     background-image: linear-gradient(to bottom right,rgb(0, 0, 0), rgb(12, 32, 69));
     justify-content: flex;
     position: relative;
@@ -378,6 +503,7 @@ html a{
     position: relative;
     margin-bottom: 0px;
 }
+
 .seemore{
     display: flex;
     align-items: center;
@@ -418,8 +544,77 @@ html a{
     padding-right: 2vw;
 }
 
-/* Contact */
 
+@media screen and (max-width: 1000px) {
+    .content2{
+        padding-bottom: 10vw
+    }
+    .projets{
+        font-size: 8vw;
+        top: 31vw;
+    }
+
+    .cardcontainer{
+        margin-top: 42vw;
+    }
+    .ctitle{
+        font-size: 5vw;
+    }
+    .card:hover .ctitle{
+        font-size: 6vw;
+    }
+    .seemore{
+        border-radius: 2%;
+        font-size: 2.5vw;
+        height: 7vw; 
+        margin-bottom: 13vw;
+    }
+    .seemore:hover{
+        font-size: 2.7vw;
+    }
+}
+@media screen and (max-width: 750px) {
+    .projets{
+        font-size: 12vw;
+        top: 18vw;
+    }
+
+    .card {
+        width: 80vw;
+        height: 50vh;
+        margin: 2vh;
+        margin-left: 0vh;
+        margin-right: 0vh;
+    }
+    .card:hover {
+        width: 82vw;
+        height: 52vh;
+        margin: 5vh;
+        box-shadow: 10px 0px 60px rgb(8, 47, 118);
+    }
+
+    .sub {
+        font-size:4vw;
+    }
+    .ctitle{
+        font-size: 7vw;
+    }
+    .card:hover .ctitle{
+        font-size: 8vw;
+    }
+
+    .seemore{
+        border-radius: 2%;
+        font-size: 3.5vw;
+        height: 8vw; 
+        margin-bottom: 13vw;
+    }
+    .seemore:hover{
+        font-size: 3.7vw;
+    }
+}
+
+/* Contact */
 .content3{
     background-image: linear-gradient(to bottom right,rgb(0, 0, 0), rgb(36, 0, 67));
     justify-content: center;
@@ -481,6 +676,32 @@ html a{
     transition: all 0.3s ease;
     padding-left: 2vw;
     padding-right: 2vw;
+}
+
+@media screen and (max-width: 1000px) {
+
+    .historybutton{
+        font-size: 2.5vw;
+        height: 7vw; 
+        margin-bottom: 13vw;
+    }
+    .historybutton:hover{
+        font-size: 2.7vw;
+    }
+}
+@media screen and (max-width: 500px) {
+    .headercontact{
+        font-size: 10vw;
+        line-height: 0.8;
+    }
+    .historybutton{
+        font-size: 3.5vw;
+        height: 7vw; 
+        margin-bottom: 13vw;
+    }
+    .historybutton:hover{
+        font-size: 3.7vw;
+    }
 }
 
 /* Bas de page */
@@ -593,6 +814,53 @@ html a{
     font-size: 1.5vh;
 }
 
+@media screen and (max-width: 1000px) {
+    .headtext{
+        font-size: 2vw;
+        top: 1vh;
+        left: 2.5vw;
+    }
+    .labellistfoot{
+        font-size: 1.7vw;
+        margin-top: 5vh;
+    }
+    .listfooter{
+        font-size: 1.5vw;
+        margin-bottom: 0vh;
+    }
+}
+@media screen and (max-width: 750px) {
+    .headtext{
+        font-size: 4vw;
+        top: 1vh;
+        left: 2.5vw;
+    }
+    .labellistfoot{
+        font-size: 2.7vw;
+        margin-top: 5vh;
+    }
+    .listfooter{
+        font-size: 2.5vw;
+        margin-bottom: 3vh;
+    }
+    .linkedin{
+        top: 5vh; 
+        right: 3vh;
+        width: 8.5vw;
+    }
+    .linkedin:hover{
+        width: 8.6vw;
+    }
+    .github{
+        top: 12vh; 
+        right: 3vh;
+        width: 8.5vw;
+    }
+    .github:hover{
+        width: 8.6vw;
+    }
+}
+
 /* ################### */
 /* #### Keyframes #### */
 /* ################### */
@@ -611,4 +879,12 @@ html a{
     } 100% {
         background-position: 0% 0%;
     }
+}
+
+@keyframes scroll1{ 
+    to {transform: translateX(-50%);}
+}
+@keyframes scroll2{
+    from {transform: translateX(-50%);} 
+    to {transform: translateX(00%);}
 }
