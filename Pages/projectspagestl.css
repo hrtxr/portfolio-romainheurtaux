@@ -132,6 +132,8 @@ html a{
     } 
 }
 
+/*-------------------------------------- Contenu principal - */
+
 /* Title */
 .content1{
     justify-content: flex;
@@ -241,6 +243,81 @@ html a{
     margin-bottom: 0px;
 }
 
+@media screen and (max-width: 1000px) {
+
+    .content2{
+        padding-bottom: 10vw
+    }
+    .projets{
+        font-size: 8vw;
+        top: 31vw;
+    }
+
+    .cardcontainer{
+        margin-top: 1vw;
+    }
+    .ctitle{
+        font-size: 5vw;
+    }
+    .card:hover .ctitle{
+        font-size: 6vw;
+    }
+    .seemore{
+        border-radius: 2%;
+        font-size: 2.5vw;
+        height: 7vw; 
+        margin-bottom: 13vw;
+    }
+    .seemore:hover{
+        font-size: 2.7vw;
+    }
+    .categorytitle{
+        font-size: 8vw;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .projets{
+        font-size: 12vw;
+        top: 18vw;
+    }
+
+    .card {
+        width: 80vw;
+        height: 50vh;
+        margin: 2vh;
+        margin-left: 0vh;
+        margin-right: 0vh;
+    }
+    .card:hover {
+        width: 82vw;
+        height: 52vh;
+        margin: 5vh;
+        box-shadow: 10px 0px 60px rgb(8, 47, 118);
+    }
+
+    .sub {
+        font-size:4vw;
+    }
+    .ctitle{
+        font-size: 7vw;
+    }
+    .card:hover .ctitle{
+        font-size: 8vw;
+    }
+
+    .seemore{
+        border-radius: 2%;
+        font-size: 3.5vw;
+        height: 8vw; 
+        margin-bottom: 13vw;
+    }
+    .seemore:hover{
+        font-size: 3.7vw;
+    }
+}
+
+/*---------------------------------------------------------- */
 /* Bas de page */
 .content4{
     background-color: black;
