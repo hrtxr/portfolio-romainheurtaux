@@ -1,0 +1,7 @@
+Fais les photos (PH) & projet (PR) pour:
+
+- PR Morpy0n
+- PH&PR S101 Implémentation
+- PH&PR S102 Comparaison
+- PH&PR S103 Installation 2 Poste
+- PH&PR S104 CreationBD

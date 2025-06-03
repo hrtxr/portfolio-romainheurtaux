@@ -214,12 +214,59 @@ html a{
     box-shadow: 10px 0px 60px rgb(8, 47, 118);
 }
 
-.cportfolio {
+/* -------- Pages différentes -------- */
+
+.cportfolio { /* Page Faite */
     background-image: url('../Graphical elements/photos/PortfolioWbst.JPG');
 }
-.morpyon {
+.morpyon {  /* Page Pas Faite */
     background-image: url('../Graphical elements/photos/Morpy0n.JPG');
 }
+
+.sae1 { /* Page Pas Faite */
+    background-image: url('');
+}
+.sae2 { /* Page Pas Faite */
+    background-image: url('');
+}
+.sae3 { /* Page Pas Faite */
+    background-image: url('');
+}
+.sae4 { /* Page Pas Faite */
+    background-image: url('');
+}
+.sae5 { /* Page Pas Faite */
+    background-image: url('');
+}
+.sae6 { /* Page Pas Faite */
+    background-image: url('');
+}
+.sae7 { /* Page Pas Faite */
+    background-image: url('');
+}
+.sae8 { /* Page Pas Faite */
+    background-image: url('');
+}
+.sae9 { /* Page Pas Faite */
+    background-image: url('');
+}
+.sae10 { /* Page Pas Faite */
+    background-image: url('');
+}
+.sae11 { /* Page Pas Faite */
+    background-image: url('');
+}
+.sae12 { /* Page Pas Faite */
+    background-image: url('');
+}
+
+.chifupy {  /* Page Pas Faite */
+    background-image: url('../Graphical elements/photos/Chifumi.JPG');
+}
+.mobilite { /* Page Pas Faite */
+    background-image: url('../Graphical elements/photos/ProjetMobilite.JPG');
+}
+/* -------- ----------------- -------- */
 
 .ctitle{
     display: flex;
