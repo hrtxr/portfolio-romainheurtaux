@@ -1,0 +1,732 @@
+/* ############################ */
+/* #### IMPORT DES POLICES #### */
+/* ############################ */
+/* Stara- Medium */
+@font-face {
+    font-family: 'Stara-Medium';
+    src: url('../../../Graphical elements/fonts/Stara-Medium.ttf') format('truetype');
+}
+/* Modius */
+@font-face {
+    font-family: 'Modius';
+    src: url('../../../Graphical elements/fonts/Modius.ttf') format('truetype');
+}
+/* ModiusBld */
+@font-face {
+    font-family: 'ModiusBld';
+    src: url('../../../Graphical elements/Fonts/Modius Bold.ttf') format('truetype');
+}
+
+/* #################### */
+/* #### STYLESHEET #### */
+/* #################### */
+
+/*body & html*/
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+html{
+    justify-content: flex;
+    flex-direction: column;
+    background-color: black;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+html a{
+    text-decoration: none;
+}
+
+/* Header */
+.bg{
+    justify-content: flex;
+    position: fixed;
+    height: 21vh;
+    width: 100vw;
+    max-width: 100%;
+    z-index: 2;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    -webkit-mask-image: linear-gradient(to bottom,black 10%,transparent 100%);
+}
+.header{
+    position: fixed;
+    top: 0;
+    height: 14vh;
+    width: 100vw;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+.header img{
+    width: 7vh;
+    height: 7vh;
+    z-index: 2;
+    align-self: flex-start;
+    padding: 1% 1% 1% 1%;
+    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+}
+.header img:hover{
+    transform: rotate(90deg);
+}
+
+/* Menu */
+.menu {
+    font-family: Stara-Medium;
+    display: none; 
+    position: absolute;
+    top: 10vh; 
+    width: 100%;
+    text-align: center;
+    z-index: 9;
+    text-shadow: rgb(0, 0, 0) 0px 0 2px;
+    transition: all 0.3s ease;
+}
+.header:hover .menu {
+    display: block; 
+    backdrop-filter: blur(2px);
+    transition: all 0.3s ease;
+}
+.menu a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    backdrop-filter: blur(2px);
+    transition: all 0.3s ease;
+}
+.menu a:hover {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    color: rgb(171, 75, 255);
+    box-shadow: 0px 0px 30px black;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1000px) {
+    .header img{
+        width: 8vh;
+        height: 8vh;
+    }
+    .menu {
+        top: 11vh;
+    } 
+}
+@media screen and (max-width: 750px) {
+    .header img{
+        width: 9vh;
+        height: 9vh;
+    }
+    .menu {
+        top: 12vh;
+    } 
+}
+
+/*-------------------------------------- Contenu principal - */
+/*land*/
+.landing{
+    justify-content: flex;
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    max-height: 100%; 
+    overflow-x: hidden;
+
+    /* CHANGER L'IMAGE */
+    background-image:url('../../../Graphical elements/photos/Darken/S201.JPG');
+    
+    background-size: cover; 
+    background-position: center;
+    overflow: hidden;
+}
+
+.triangle{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    z-index: 1;
+    filter: drop-shadow(0px 0px 30px rgb(0, 45, 128));
+}
+.ttleft {
+    top: 0;
+    left: 0;
+    border-width: 20vh 50vw 0 0; 
+    border-color: rgb(0, 0, 0) transparent transparent transparent;
+}
+.tbright {
+    bottom: 0;
+    right: 0;
+    border-width: 0 0 20vh 50vw; 
+    border-color: transparent transparent rgb(0,0,0) transparent;
+}
+
+.titl{
+    color: white;
+    font-family: ModiusBld;
+    font-size: 6.5vw;
+    position: absolute;
+    top: 30vh;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.titl:hover{
+    color: rgb(171, 75, 255);
+}
+
+.titl-mobile{
+    color: white;
+    font-family: ModiusBld;
+    font-size: 10vh;
+    display: none;
+    z-index: 1;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.subtitl{
+    color: white;
+    font-family: Stara-Medium;
+    font-size: 2vw;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+    top: 45vh;
+}
+.subtitl:hover{
+    color: rgb(0, 89, 255);
+}
+
+@media screen and (max-width: 1000px) {
+    .titl{
+        font-size: 10.25vw;
+    }   
+
+    .subtitl{
+        font-size: 2.7vw;
+        top: 45vh;
+    }
+
+    .ttleft {
+        border-width: 20vh 75vw 0 0; 
+    }
+    .tbright {
+        border-width: 0 0 20vh 75vw; 
+    }
+}
+@media screen and (max-width: 750px) {
+    .titl{
+        display: none;
+    }
+    .titl-mobile{
+        font-size: 7vw;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin-left: 4vw;
+        margin-right: 3vw;
+        top: 38vh;
+        position: relative;
+        z-index: 1;
+    }
+
+    .subtitl{
+        font-size: 4vw;
+        position: relative;
+        top: 35vh;
+        display: flex;
+        text-align: center;
+        z-index: 1;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+
+    .ttleft {
+        border-width: 10vh 100vw 0 0; 
+    }
+    .tbright {
+        border-width: 0 0 10vh 100vw; 
+    }
+}
+/* content */
+.content1{
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    max-height: 100%; 
+    overflow-x: hidden;
+    background-image: linear-gradient(to bottom right,rgb(0, 0, 0), rgb(62, 0, 117));
+    background-size: cover; 
+    background-position: center;
+    overflow: hidden;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.content1 h2{
+    text-align: center;
+    color: white;
+    font-family: Modius;
+    font-size: 4vw;
+    margin-bottom: 3vh;
+}
+
+.content1 p{
+    color: white;
+    font-family: Stara-Medium;
+    font-size: 1.5vw;
+    text-align: center;
+    max-width: 70%;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.content1 h3{
+    text-align: center;
+    color: rgb(194, 194, 194);
+    font-family: Modius;
+    font-size: 2.5  vw;
+    margin-bottom: 0vh;
+    margin-top: 7vh;
+}
+
+.liste-competences {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.competence-tag {
+    font-family: Stara-Medium;
+    background: rgba(138, 43, 226, 0.1);
+    color: #ffffff;
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    border: 1px solid rgba(138, 43, 226, 0.3);
+    backdrop-filter: blur(5px);
+    transition: all 0.6s ease;
+}
+.competence-tag:hover {
+    box-shadow: 0 5px 15px rgba(138, 43, 226, 0.3);
+    background: rgba(138, 43, 226, 0.2);
+    border-color: rgba(138, 43, 226, 0.6);
+}
+.competence-tag:hover::before {
+    left: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+    .content1 h2{
+        font-size: 6vw;
+    }
+    .content1 p{
+        font-size: 2.5vw;
+    }
+    .content1 h3{
+        font-size: 2.5vw;
+    }
+    .competence-tag {
+        font-size: 2.5vw;
+        padding: 8px 18px;
+    }
+}
+
+@media screen and (max-width: 750px){
+    .content1 h2{
+        font-size: 6vw;
+    }
+    .content1 p{
+        font-size: 4vw;
+    }
+    .content1 h3{
+        font-size: 3vw;
+    }
+    .competence-tag {
+        font-size: 3vw;
+        padding: 8px 18px;
+    }
+
+    .liste-competences{
+        margin: 2vh;
+    }
+}
+
+/* contentused */
+.technoused{
+    justify-content: flex;
+    width: 100vw;
+    /* height: 50vh; */
+    max-width: 100%;
+    max-height: 100%; 
+    overflow-x: hidden;
+    background-image: linear-gradient(to bottom left,rgb(125, 125, 125), rgb(253, 253, 253));
+    background-size: cover; 
+    background-position: center;
+    overflow: hidden;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.technoused h2{
+    margin-top: 10vh;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: Modius;
+    font-size: 4vw;
+    margin-bottom: 3vh;
+}
+
+.listlogos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    flex-wrap: wrap;
+}
+
+.logotech{
+    height: 12vh;
+    width: 12vh;
+    margin: 0 2vw;
+    margin-bottom: 2vh;
+    filter: saturate(0) contrast(2) brightness(1.3) drop-shadow(0px 0px 10px rgb(0, 0, 0));
+    transition: all 0.3s ease;
+}
+.logotech:hover{
+    height: 14vh;
+    width: 14vh;
+    margin-bottom: 0vh;
+    filter: saturate(1);
+    transition: all 0.3s ease;
+}
+
+.downloadbutton{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.75vw;
+    color: rgb(0, 0, 0);
+    font-family: Stara-Medium;
+    box-shadow: 0px 0px 30px rgb(0, 0, 0);
+    transition: all 0.3s ease;
+    height: 8vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1vh;
+    margin: 5vh 40vw 7vh 40vw;
+}
+.downloadbutton:hover{
+    box-shadow: 0px 0px 30px rgb(8, 47, 118);
+    font-size: 2vw;
+    height: 9vh;
+    margin: 4.5svh 38vw 6.5vh 38vw;
+    background-color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 10px rgb(0, 89, 255);
+    transition: all 0.3s ease;
+}
+
+.downloadbuttontext{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.1s ease;
+}
+
+@media screen and (max-width: 1000px) {
+    .technoused h2{
+        font-size: 4vw;
+    }
+    
+    .logotech{
+        margin: 0vh 2vw 0vh 2vw;
+    }
+}
+
+@media screen and (max-width: 750px){
+    .technoused h2{
+        font-size: 6vw;
+    }
+
+    .logotech{
+        align-items: space-between;
+        height: 8vh;
+        width: 8vh;
+        margin: 0vh 2vw 0vh 2vw;
+        filter: saturate(1);
+    }
+    .logotech:hover{
+        height: 10vh;
+        width: 10vh;
+        margin-bottom: 0vh;
+    }
+
+    .downloadbutton{
+        font-size: 3.75vw;
+        height: 7vh;
+        margin: 5vh 28vw 7vh 28vw;
+    }
+    .downloadbutton:hover{
+        font-size: 4vw;
+        height: 8vh;
+        margin: 4.5vh 26vw 6.5vh 26vw;
+    }
+}
+
+/* Recaptab */
+.recaptab{
+    justify-content: flex;
+    width: 100vw;
+    height: 50vh;
+    max-width: 100%;
+    max-height: 100%; 
+    overflow-x: hidden;
+    background-image: linear-gradient(to bottom left,rgb(0, 0, 0), rgb(62, 27, 0));
+    background-size: cover; 
+    background-position: center;
+    overflow: hidden;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.recaptab h2{
+    margin-top: 0vh;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: Modius;
+    font-size: 4vw;
+    margin-bottom: 3vh;
+}
+
+.tab {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    font-family: Stara-Medium;
+    border-collapse: collapse;
+    color:white;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+}
+
+.tab th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+    padding: 1vh;
+}
+
+.tab th {
+    background-color: rgb(76, 37, 0);
+}
+
+@media screen and (max-width: 1000px) {
+    .recaptab{
+        max-height: fit-content;
+        height: 100vh;
+    }
+    .recaptab h2{
+        margin-top: 20vh;
+        font-size: 4vw;
+    }
+    .tab {
+        font-size: 2.5vw;
+        margin-bottom: 20vh;
+    }
+}
+
+@media screen and (max-width: 750px){
+    .recaptab{
+        max-height: fit-content;
+        height: 100vh;
+    }
+    .recaptab h2{
+        margin-top: 15vh;
+        font-size: 6vw;
+    }
+    .tab {
+        font-size: 2.75vw;
+        margin-bottom: 15vh;
+    }
+}
+
+/*---------------------------------------------------------- */
+
+/* Bas de page */
+.content4{
+    background-color: black;
+    justify-content: flex;
+    position: relative;
+    width: 100vw;
+    max-width: 100%;
+    max-height: 50%;
+    z-index: 1;
+    overflow-x: hidden;
+    color:rgb(176, 176, 176);
+    font-family: Stara-Medium;
+    list-style-type: none;
+    font-size: 0.9vw;
+}
+
+.divider{
+    display: flex;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    background-color: white;
+    height: 0.1vh;
+}
+
+.headtext{
+    position: relative;
+    left: 0;
+    color: rgb(176, 176, 176);
+    font-family: Stara-Medium;
+    font-size: 1.5vw;
+    top: 1vh;
+    left: 2.5vw;
+    z-index: 1;
+} 
+
+.labellistfoot{
+    display: flex;
+    justify-content: flex;
+    width: 100vw;
+    margin-top: 3vh;
+    padding-left: 4vw;
+    margin-bottom: -0.25vh;
+}
+
+.listfooter{
+    display: flex;
+    flex-direction: column;
+    width: 100vw; 
+    margin-bottom: 0vh;
+    font-style: italic;
+}
+.listfooter ul {
+    margin: 0.5vh 0;
+    padding: 0.2vh 0 5;
+}
+.listfooter a{
+    color: rgb(176, 176, 176);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-decoration-line: underline;
+}
+.listfooter a:hover{
+    color: rgb(171, 75, 255);
+}
+
+.linkedin{
+    position: absolute; 
+    top: 10vh; 
+    right: 3vh;
+    display: flex;
+    justify-content: flex;
+    width: 3vw;
+    font-size: 1.5vh;
+    filter: drop-shadow(0px 0px 0px rgb(171, 75, 255));
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+.linkedin:hover{
+    filter: drop-shadow(0px 0px 10px rgb(171, 75, 255));
+    width: 3.1vw;
+}
+
+.github{
+    position: absolute; 
+    top: 3vh; 
+    right: 3vh;
+    display: flex;
+    justify-content: flex;
+    width: 3vw;
+    font-size: 1.5vh;
+    filter: drop-shadow(0px 0px 0px rgb(171, 75, 255));
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+.github:hover{
+    filter: drop-shadow(0px 0px 10px rgb(171, 75, 255));
+    width: 3.1vw;
+}
+
+.copiryghtandco{
+    display: flex;
+    justify-content: flex-end;
+    width: 100vw;
+    margin-top: 1vh;
+    margin-bottom: 0vh;
+    padding-right: 5vw;
+    bottom: 0;
+    font-size: 1.5vh;
+}
+
+@media screen and (max-width: 1000px) {
+    .headtext{
+        font-size: 2vw;
+        top: 1vh;
+        left: 2.5vw;
+    }
+    .labellistfoot{
+        font-size: 1.7vw;
+        margin-top: 5vh;
+    }
+    .listfooter{
+        font-size: 1.5vw;
+        margin-bottom: 0vh;
+    }
+}
+@media screen and (max-width: 750px) {
+    .headtext{
+        font-size: 4vw;
+        top: 1vh;
+        left: 2.5vw;
+    }
+    .labellistfoot{
+        font-size: 2.7vw;
+        margin-top: 5vh;
+    }
+    .listfooter{
+        font-size: 2.5vw;
+        margin-bottom: 3vh;
+    }
+    .linkedin{
+        top: 5vh; 
+        right: 3vh;
+        width: 8.5vw;
+    }
+    .linkedin:hover{
+        width: 8.6vw;
+    }
+    .github{
+        top: 12vh; 
+        right: 3vh;
+        width: 8.5vw;
+    }
+    .github:hover{
+        width: 8.6vw;
+    }
+}
+
+
+/* ################### */
+/* #### Keyframes #### */
+/* ################### */

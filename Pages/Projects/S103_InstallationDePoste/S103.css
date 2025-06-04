@@ -142,7 +142,7 @@ html a{
     overflow-x: hidden;
 
     /* CHANGER L'IMAGE */
-    background-image:url('../../../Graphical elements/photos/Morpy0n.JPG');
+    background-image:url('../../../Graphical elements/photos/Darken/S103.JPG');
     
     background-size: cover; 
     background-position: center;
@@ -384,6 +384,7 @@ html a{
     display: flex;
     flex-direction: column;
     align-self: center;
+    padding-bottom: 5vh;
 }
 
 .technoused h2{
