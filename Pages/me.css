@@ -423,7 +423,7 @@ html a{
     position: relative;
     flex-wrap: wrap;
     gap: 12px;
-    margin: 0vh 10vw 25vh 10vw;
+    margin: 0vh 10vw 5vh 10vw;
 }
 
 .competence-tag {
@@ -454,6 +454,96 @@ html a{
 @media  screen and (max-width: 750px) {
 
 }
+
+/* Personnalité */
+#prsnlty{
+    margin: 0vh;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    padding: 0%;
+}
+
+.prsnltygraphes {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 0vh 25vw 10vh 25vw;
+}
+
+.prsnltygraphes p{
+    font-family: Stara-Medium;
+    color: white;
+    font-size: 2vw;
+    margin-top: 2vh;
+    margin-bottom: 0vh;
+}
+
+.graphik {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 1.5vh;
+    background-color: rgba(179, 179, 179, 0.2);
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#q1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 10%;
+    height: 100%;
+    background: linear-gradient(to right, rgb(171, 75, 255), rgb(0, 89, 255));
+    border-radius: 12px;
+}
+#q1 p {
+    font-family: Stara-Medium;
+    color: white;
+    font-size: 1vw;
+    margin: 0vh 0vw 0vh 1vw;
+}
+
+#q2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+    background: linear-gradient(to right, rgb(171, 75, 255), rgb(0, 89, 255));
+    border-radius: 12px;
+}
+#q2 p {
+    font-family: Stara-Medium;
+    color: white;
+    font-size: 1vw;
+    margin: 0vh 0vw 0vh 1vw;
+}
+
+#q3 {
+   display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 30%; 
+    height: 100%;
+    background: linear-gradient(to right, rgb(171, 75, 255), rgb(0, 89, 255));
+    border-radius: 12px;
+}
+#q3 p {
+    font-family: Stara-Medium;
+    color: white;
+    font-size: 1vw;
+    margin: 0vh 0vw 0vh 1vw;
+}
+
+#txtmention {
+    font-family: Stara-Medium;
+    color: rgb(124, 124, 124);
+    font-size: 0.5vw;
+    text-align: end;
+}
+
 
 /* Bandeau de compétences */
 .bandeaucompetences {
