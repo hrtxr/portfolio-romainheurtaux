@@ -4,12 +4,12 @@
 /* Stara- Medium */
 @font-face {
     font-family: 'Stara-Medium';
-    src: url('../../../Graphical elements/fonts/Stara-Medium.otf') format('truetype');
+    src: url('../../../Graphical elements/Fonts/Stara-Medium.ttf') format('truetype');
 }
 /* Modius */
 @font-face {
     font-family: 'Modius';
-    src: url('../../../Graphical elements/fonts/Modius.ttf') format('truetype');
+    src: url('../../../Graphical elements/Fonts/Modius.ttf') format('truetype');
 }
 /* ModiusBld */
 @font-face {
