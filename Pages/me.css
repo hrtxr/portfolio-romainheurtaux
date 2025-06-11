@@ -538,7 +538,7 @@ html a{
 }
 
 #q4 {
-   display: flex;
+    display: flex;
     flex-direction: row;
     align-items: center;
     width: 100%; 
@@ -546,7 +546,7 @@ html a{
     background: linear-gradient(to right, rgb(171, 75, 255), rgb(0, 89, 255));
     border-radius: 12px;
 }
-#q4 p {
+#q4 p{
     font-family: Stara-Medium;
     color: white;
     font-size: 1vw;
