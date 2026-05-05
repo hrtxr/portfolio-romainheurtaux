@@ -1,0 +1,45 @@
+# ---------------------------------------------------------------------------
+# .dockerignore – keep the build context lean and secure
+# ---------------------------------------------------------------------------
+
+# Version control
+.git/
+.gitignore
+
+# Secrets – never bake credentials into the image
+.env
+.env.*
+!.env.example
+
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Dev / editor artefacts
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Docs & one-off scripts (not needed at runtime)
+README.md
+ascii.html
+make_ascii.py
+docker-compose.yml
+docker-compose.override.yml
+
+# docker/ subfolder is not needed inside the image
+# (the Dockerfile is read by the daemon directly, not via COPY)
+docker/

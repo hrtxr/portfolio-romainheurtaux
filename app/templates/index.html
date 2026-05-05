@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <!-- Landing Page -->
+    <section class="h-[calc(100vh-73px)] flex flex-col justify-center items-start text-left px-6 relative overflow-hidden">
+        <div class="z-10">
+            <h2 class="text-muted text-xs mb-4 font-mono uppercase tracking-widest">01 PORTFOLIO</h2>
+            <h1 class="text-7xl lg:text-9xl font-modius leading-none mb-4 text-signal">
+                Romain <br>
+                <span class="text-outline font-bold text-signal">HEURTAUX</span>
+            </h1>
+        </div>
+        
+        <!-- Visible Rotating Logo -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 pointer-events-none mix-blend-screen w-[80vw] lg:w-[40vw]">
+            <img src="{{ url_for('static', filename='Graphical elements/SVG/LoopholeWhite.svg') }}" class="w-full h-full opacity-10 animate-[spin_15s_linear_infinite]">
+        </div>
+    </section>
+
+    <!-- A propos Page -->
+    <section class="py-24 px-6 lg:px-24 bg-carbon text-steel border-y border-graphite">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-modius mb-12 text-signal">// À Propos</h2>
+            <div class="flex flex-col lg:flex-row gap-12 items-center">
+                <div class="w-64 h-64 flex-shrink-0 rounded-none overflow-hidden border border-graphite grayscale-[10%] contrast-[105%]">
+                    <img src="{{ url_for('static', filename='Graphical elements/photos/pp Large.jpeg') }}" class="w-full h-full object-cover">
+                </div>
+                <p class="text-xl leading-relaxed">
+                    Mon nom est Romain Heurtaux et je suis étudiant en BUT informatique 
+                    à l'IUT de Villetaneuse. L'informatique a toujours été au cœur de mes centres d'intérêts
+                    comme la photographie, la vidéo, les jeux-vidéos ou encore la musique.
+                    J'aime beaucoup créer, designer, concevoir et conceptualiser des idées via ce médium et
+                    j'aimerais partager cette passion au service du monde. 
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="py-24 px-6 lg:px-24 bg-obsidian border-b border-graphite">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex justify-between items-end mb-12">
+                <h2 class="text-4xl font-modius text-signal">// Projets</h2>
+                <a href="{{ url_for('main.projects') }}" class="text-xs uppercase tracking-widest font-bold border-b border-graphite hover:text-uv hover:border-uv transition-colors pb-1 text-muted">
+                    Voir plus de projets
+                </a>
+            </div>
+            
+            <!-- React Root -->
+            <div id="project-gallery-react-root"></div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="py-32 px-6 bg-black text-left border-b border-graphite">
+        <h2 class="text-3xl lg:text-5xl font-modius mb-12 text-signal">Intéressé de construire <br> quelque chose ensemble ?</h2>
+        <a href="#" class="contact-trigger inline-block px-12 py-5 bg-signal text-obsidian font-bold rounded-none hover:bg-uv hover:text-signal transition-colors text-sm tracking-widest uppercase">
+            Notre Histoire commence maintenant !
+        </a>
+    </section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script type="text/babel" src="{{ url_for('static', filename='js/ProjectCard.jsx') }}"></script>
+<script type="text/babel">
+    const projects = {{ projects | selectattr('featured') | list | tojson | safe }};
+    const root = ReactDOM.createRoot(document.getElementById('project-gallery-react-root'));
+    root.render(<ProjectGallery projects={projects} category="All" />);
+</script>
+{% endblock %}

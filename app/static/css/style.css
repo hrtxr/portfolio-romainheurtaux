@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'Modius';
+    src: url('../Graphical elements/Fonts/Modius.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Stara';
+    src: url('../Graphical elements/Fonts/Stara-Medium.ttf') format('truetype');
+}
+
+.perspective-1000 {
+    perspective: 1000px;
+}
+
+.transform-style-3d {
+    transform-style: preserve-3d;
+}
+
+.text-outline {
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+}
+
+.bg-dot-matrix {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.4) 1px, transparent 1px);
+    background-size: 10px 10px;
+}
+
+@keyframes spin-slow {
+    from { transform: rotate(0deg) translate(-50%, -50%); transform-origin: top left; }
+    to { transform: rotate(360deg) translate(-50%, -50%); transform-origin: top left; }
+}
+
+@keyframes slide-dots {
+    from { transform: translateY(0); }
+    to { transform: translateY(-50%); }
+}
+
+.animate-matrix {
+    animation: slide-dots 20s linear infinite;
+}

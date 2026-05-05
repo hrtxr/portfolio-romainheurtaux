@@ -1,0 +1,31 @@
+# ---------------------------------------------------------------------------
+# docker-compose.yml – Portfolio
+# ---------------------------------------------------------------------------
+# Usage:
+#   docker-compose up --build        # first run / after code changes
+#   docker-compose up -d             # detached (background)
+#   docker-compose down              # stop & remove containers
+# ---------------------------------------------------------------------------
+
+services:
+  portfolio:
+    build:
+      context: .                     # build context = project root
+      dockerfile: docker/Dockerfile  # Dockerfile lives in docker/ subfolder
+    container_name: portfolio_app
+    restart: unless-stopped
+    ports:
+      - "5001:5000"
+    env_file:
+      - .env                         # load SECRET_KEY, PORT, etc.
+    environment:
+      - FLASK_ENV=production         # safety override – never run debug in prod
+    # Mount app/data/ so you can update projects.json without rebuilding.
+    volumes:
+      - ./app/data:/app/app/data:ro
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s

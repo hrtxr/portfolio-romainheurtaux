@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ project.title }} - Détails{% endblock %}
+
+{% block extra_css %}
+<style>
+    .glass {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="min-h-screen pt-12 pb-12 px-6 lg:px-24 bg-black text-steel font-reading">
+    <div class="max-w-6xl mx-auto">
+        <!-- Breadcrumb -->
+        <div class="mb-8 text-muted text-xs uppercase tracking-widest font-tech">
+            <a href="{{ url_for('main.projects') }}" class="hover:text-uv transition-colors">Projets</a> / {{ project.title | replace('#', '') }}
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Project Image -->
+            <div class="rounded-none overflow-hidden border border-graphite grayscale-[10%] contrast-[105%] h-64 lg:h-[32rem]">
+                <img src="{{ url_for('static', filename=project.image_url) }}" alt="{{ project.title }}" class="w-full h-full object-cover">
+            </div>
+
+            <!-- Project Details Text -->
+            <div class="mb-16">
+                <h1 class="text-4xl lg:text-6xl font-modius mb-8 text-signal">{{ project.title }}</h1>
+                <p class="text-xl text-steel leading-relaxed">
+                    {{ project.full_description }}
+                </p>
+            </div>
+        </div>
+
+        <!-- TECHNOLOGIES UTILISÉS -->
+        <div class="mt-24 text-left">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-modius text-signal mb-16 uppercase break-words hyphens-auto w-full">TECHNOLOGIES UTILISÉS</h2>
+            
+            <div class="flex justify-start items-center gap-8 mb-16 flex-wrap">
+                {% for icon in project.tech_icons %}
+                <i class="devicon-{{ icon }}-plain text-6xl lg:text-8xl text-steel hover:text-signal transition-colors drop-shadow-lg"></i>
+                {% endfor %}
+            </div>
+
+            {% if project.github_url != '#' %}
+            <a href="{{ project.github_url }}" target="_blank" class="inline-block px-8 py-4 bg-signal text-obsidian font-bold text-lg rounded-xl shadow-2xl hover:scale-105 transition-transform mb-32">
+                Télécharger le projet
+            </a>
+            {% endif %}
+        </div>
+
+        <!-- RÉCAPITULATIF TECHNIQUE -->
+        <div class="mt-16 text-left">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-modius text-signal mb-12 uppercase break-words hyphens-auto w-full">RÉCAPITULATIF TECHNIQUE</h2>
+            
+            <div class="overflow-x-auto">
+                <table class="w-full border border-graphite text-left bg-black">
+                    <thead>
+                        <tr class="border-b border-graphite">
+                            <th class="p-6 font-bold text-signal w-1/3 border-r border-graphite text-center">Technologies utilisés</th>
+                            <th class="p-6 font-bold text-signal w-1/3 border-r border-graphite text-center">Technologies maitrisées</th>
+                            <th class="p-6 font-bold text-signal w-1/3 text-center">Axes d'amélioration</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="p-6 border-r border-graphite text-steel align-top">
+                                <ul class="space-y-2 list-none">
+                                    {% for tech in project.tech_used %}
+                                    <li>- {{ tech }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </td>
+                            <td class="p-6 border-r border-graphite text-steel align-top">
+                                <ul class="space-y-2 list-none">
+                                    {% for tech in project.tech_mastered %}
+                                    <li>- {{ tech }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </td>
+                            <td class="p-6 text-steel align-top whitespace-pre-line">
+                                {{ project.improvements }}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

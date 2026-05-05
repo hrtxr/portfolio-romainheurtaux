@@ -1,8 +1,0 @@
-Fais les photos (PH) & projet (PR) pour:
-
-- PR Morpy0n
-- PR S101 Implémentation
-- PR S102 Comparaison
-- PR S104 CreationBD
-- PR S201 Java
-- PR S104 ExploitBD

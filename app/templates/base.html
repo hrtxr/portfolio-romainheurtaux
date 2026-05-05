@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}_// Portfolio Romain HEURTAUX{% endblock %}</title>
+    
+    <link rel="icon" href="{{ url_for('static', filename='Graphical elements/SVG/Loophole.svg') }}" type="image/x-icon">
+    
+    <!-- CSS Minimum -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: '#080808',
+                        carbon: '#141414',
+                        graphite: '#262626',
+                        signal: '#FFFFFF',
+                        steel: '#B3B3B3',
+                        muted: '#666666',
+                        uv: '#4200FF',
+                        void: '#180033',
+                        alert: '#FF2D2D',
+                    },
+                    fontFamily: {
+                        modius: ['Modius', 'sans-serif'],
+                        stara: ['Stara', 'sans-serif'],
+                        reading: ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+                    },
+                    animation: {
+                        'spin-slow': 'spin 15s linear infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- React & Babel CDNs -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    {% block extra_css %}{% endblock %}
+</head>
+<body class="bg-black text-steel font-reading overflow-x-hidden relative cursor-crosshair">
+    <header class="fixed top-0 left-0 w-full z-50 px-6 lg:px-12 py-6 flex justify-between items-center bg-black border-b border-graphite">
+        <a href="{{ url_for('main.home') }}" class="flex items-center">
+            <img src="{{ url_for('static', filename='Graphical elements/SVG/LoopholeWhite.svg') }}" class="h-10">
+        </a>
+        <nav class="flex gap-8 text-[11px] font-tech uppercase tracking-widest text-steel">
+            <a href="{{ url_for('main.projects') }}" class="text-steel hover:text-signal transition-colors">Projects</a>
+            <a href="#" class="contact-trigger text-steel hover:text-signal transition-colors">Contact</a>
+            <a href="{{ url_for('main.me') }}" class="text-steel hover:text-signal transition-colors">Moi</a>
+        </nav>
+    </header>
+
+    <main class="md:ml-64 lg:ml-80 relative z-10 pt-[73px] min-h-screen">
+        <!-- Dot Matrix Sidebar (Absolute to main, so it stops at footer) -->
+        <div class="absolute top-0 left-[-16rem] lg:left-[-20rem] w-64 lg:w-80 h-full border-r border-graphite hidden md:block z-0 pointer-events-none overflow-hidden" id="matrix-wrapper">
+            <canvas id="matrix-canvas" class="w-full h-full opacity-50"></canvas>
+        </div>
+        
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="pt-32 pb-0 bg-black border-t border-graphite mt-auto relative z-10 overflow-hidden flex flex-col">
+        <!-- Top Section: Links & Tagline -->
+        <div class="px-6 lg:px-12 w-full mb-32">
+            <div class="max-w-screen-2xl mx-auto w-full flex flex-col md:flex-row justify-between items-start gap-16">
+                <!-- Left: Logo & Dot Grid -->
+                <div class="flex items-center gap-12 group">
+                    <div class="relative">
+                        <img src="{{ url_for('static', filename='Graphical elements/SVG/LoopholeWhite.svg') }}" class="w-16 h-16 relative z-10">
+                        <!-- Dot pattern background -->
+                        <div class="absolute -top-8 -left-8 w-24 h-24 opacity-20 group-hover:opacity-40 transition-opacity duration-700" 
+                             style="background-image: radial-gradient(#6366f1 1px, transparent 1px); background-size: 8px 8px;"></div>
+                    </div>
+                    <div class="hidden lg:block h-16 w-[1px] bg-graphite"></div>
+                    <p class="hidden lg:block font-tech text-[10px] uppercase tracking-[0.3em] text-muted max-w-[200px] leading-relaxed">
+                        Creative developer & <br>Digital designer <br>© 2024
+                    </p>
+                </div>
+
+                <!-- Right: Links Grid -->
+                <div class="grid grid-cols-2 gap-x-16 gap-y-12 md:gap-x-32">
+                    <!-- Column 1 -->
+                    <div class="flex flex-col gap-6">
+                        <span class="font-tech text-[9px] text-muted uppercase tracking-[0.4em] mb-2 opacity-50">Navigation</span>
+                        <a href="{{ url_for('main.projects') }}" class="font-tech text-[11px] uppercase tracking-widest text-steel hover:text-signal transition-colors">Projets</a>
+                        <a href="{{ url_for('main.me') }}" class="font-tech text-[11px] uppercase tracking-widest text-steel hover:text-signal transition-colors">Moi</a>
+                        <a href="#" class="contact-trigger font-tech text-[11px] uppercase tracking-widest text-steel hover:text-signal transition-colors">Contact</a>
+                    </div>
+                    <!-- Column 2 -->
+                    <div class="flex flex-col gap-6">
+                        <span class="font-tech text-[9px] text-muted uppercase tracking-[0.4em] mb-2 opacity-50">Social</span>
+                        <a href="https://github.com/hrtxr" target="_blank" class="font-tech text-[11px] uppercase tracking-widest text-steel hover:text-signal transition-colors">GitHub</a>
+                        <a href="https://www.linkedin.com/in/romain-heurtaux-5a33822a1" target="_blank" class="font-tech text-[11px] uppercase tracking-widest text-steel hover:text-signal transition-colors">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full flex justify-center items-center border-y border-graphite py-0 mb-0 overflow-hidden relative">
+            <style>
+                @keyframes scanner-flare {
+                    0% { transform: translateX(-100%); opacity: 0; }
+                    10% { opacity: 0.2; }
+                    50% { opacity: 0.8; }
+                    90% { opacity: 0.2; }
+                    100% { transform: translateX(200%); opacity: 0; }
+                }
+                .ascii-flare {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 50%;
+                    height: 100%;
+                    background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.5), transparent);
+                    animation: scanner-flare 3.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+                    mix-blend-mode: color-dodge;
+                    pointer-events: none;
+                    filter: blur(12px);
+                    z-index: 10;
+                }
+            </style>
+            <pre id="ascii-pre" class="font-tech text-[0.88vw] leading-none select-none text-center w-full whitespace-pre drop-shadow-lg font-bold bg-black cursor-crosshair">{% raw %}
+<span class="text-[#0f0f0f]">##########################################################################################################################################################################################</span>
+<span class="text-[#0f0f0f]">##########################################################################################################################################################################################</span>
+<span class="text-[#0f0f0f]">####################################</span><span class="text-[#333333]">888888bbbddd888888bbb???888888,,,</span><span class="text-[#0f0f0f]">######</span><span class="text-[#333333]">888888PPP</span><span class="text-[#0f0f0f]">######</span><span class="text-[#333333]">888888bbbddd888bbb,,,ddd888888bbb</span><span class="text-[#0f0f0f]">#########</span><span class="text-[#333333]">888888bbbddd888888bbb</span><span class="text-[#0f0f0f]">#################################</span>
+<span class="text-[#0f0f0f]">####################################</span><span class="text-[#333333]">888888bbbddd888888bbb???888888,,,</span><span class="text-[#0f0f0f]">######</span><span class="text-[#333333]">888888PPP</span><span class="text-[#0f0f0f]">######</span><span class="text-[#333333]">888888bbbddd888bbb,,,ddd888888bbb</span><span class="text-[#0f0f0f]">#########</span><span class="text-[#333333]">888888bbbddd888888bbb</span><span class="text-[#0f0f0f]">#################################</span>
+<span class="text-[#0f0f0f]">####################################</span><span class="text-[#333333]">888888bbbddd888888bbb???888888,,,</span><span class="text-[#0f0f0f]">######</span><span class="text-[#333333]">888888PPP</span><span class="text-[#0f0f0f]">######</span><span class="text-[#333333]">888888bbbddd888bbb,,,ddd888888bbb</span><span class="text-[#0f0f0f]">#########</span><span class="text-[#333333]">888888bbbddd888888bbb</span><span class="text-[#0f0f0f]">#################################</span>
+<span class="text-[#0f0f0f]">####################################</span><span class="text-[#333333]">888888PPP'''</span><span class="text-[#0f0f0f]">######</span><span class="text-[#333333]">```</span><span class="text-[#0f0f0f]">###</span><span class="text-[#333333]">```???888bbbddd888PPP'''</span><span class="text-[#0f0f0f]">######</span><span class="text-[#333333]">888888PPP'''```???888PPP'''???888bbb</span><span class="text-[#0f0f0f]">######</span><span class="text-[#333333]">888888PPP'''</span><span class="text-[#0f0f0f]">###</span><span class="text-[#333333]">???888bbb</span><span class="text-[#0f0f0f]">##############################</span>
+<span class="text-[#0f0f0f]">####################################</span><span class="text-[#333333]">888888PPP'''</span><span class="text-[#0f0f0f]">######</span><span class="text-[#333333]">```</span><span class="text-[#0f0f0f]">###</span><span class="text-[#333333]">```???888bbbddd888PPP'''</span><span class="text-[#0f0f0f]">######</span><span class="text-[#333333]">888888PPP'''```???888PPP'''???888bbb</span><span class="text-[#0f0f0f]">######</span><span class="text-[#333333]">888888PPP'''</span><span class="text-[#0f0f0f]">###</span><span class="text-[#333333]">???888bbb</span><span class="text-[#0f0f0f]">##############################</span>
+<span class="text-[#0f0f0f]">####################################</span><span class="text-[#333333]">888888PPP'''</span><span class="text-[#0f0f0f]">######</span><span class="text-[#333333]">```</span><span class="text-[#0f0f0f]">###</span><span class="text-[#333333]">```???888bbbddd888PPP'''</span><span class="text-[#0f0f0f]">######</span><span class="text-[#333333]">888888PPP'''```???888PPP'''???888bbb</span><span class="text-[#0f0f0f]">######</span><span class="text-[#333333]">888888PPP'''</span><span class="text-[#0f0f0f]">###</span><span class="text-[#333333]">???888bbb</span><span class="text-[#0f0f0f]">##############################</span>
+<span class="text-[#0f0f0f]">#################################</span><span class="text-[#333333]">ddd888888</span><span class="text-[#0f0f0f]">##################</span><span class="text-[#333333]">ddd888PPP???888bbb,,,</span><span class="text-[#0f0f0f]">######</span><span class="text-[#333333]">ddd888888</span><span class="text-[#0f0f0f]">######</span><span class="text-[#333333]">ddd888888</span><span class="text-[#0f0f0f]">######</span><span class="text-[#333333]">888888PPP</span><span class="text-[#0f0f0f]">###</span><span class="text-[#333333]">ddd888888</span><span class="text-[#0f0f0f]">#########</span><span class="text-[#333333]">888888PPP</span><span class="text-[#0f0f0f]">##############################</span>
+<span class="text-[#0f0f0f]">#################################</span><span class="text-[#333333]">ddd888888</span><span class="text-[#0f0f0f]">##################</span><span class="text-[#333333]">ddd888PPP???888bbb,,,</span><span class="text-[#0f0f0f]">######</span><span class="text-[#333333]">ddd888888</span><span class="text-[#0f0f0f]">######</span><span class="text-[#333333]">ddd888888</span><span class="text-[#0f0f0f]">######</span><span class="text-[#333333]">888888PPP</span><span class="text-[#0f0f0f]">###</span><span class="text-[#333333]">ddd888888</span><span class="text-[#0f0f0f]">#########</span><span class="text-[#333333]">888888PPP</span><span class="text-[#0f0f0f]">##############################</span>
+<span class="text-[#0f0f0f]">#################################</span><span class="text-[#333333]">ddd888888</span><span class="text-[#0f0f0f]">##################</span><span class="text-[#333333]">ddd888PPP???888bbb,,,</span><span class="text-[#0f0f0f]">######</span><span class="text-[#333333]">ddd888888</span><span class="text-[#0f0f0f]">######</span><span class="text-[#333333]">ddd888888</span><span class="text-[#0f0f0f]">######</span><span class="text-[#333333]">888888PPP</span><span class="text-[#0f0f0f]">###</span><span class="text-[#333333]">ddd888888</span><span class="text-[#0f0f0f]">#########</span><span class="text-[#333333]">888888PPP</span><span class="text-[#0f0f0f]">##############################</span>
+<span class="text-[#0f0f0f]">##############################</span><span class="text-[#333333]">ddd888888'''</span><span class="text-[#0f0f0f]">###############</span><span class="text-[#333333]">ddd888PPP'''</span><span class="text-[#0f0f0f]">###</span><span class="text-[#333333]">```???888bbbddd888888'''</span><span class="text-[#0f0f0f]">###</span><span class="text-[#333333]">ddd888888'''</span><span class="text-[#0f0f0f]">######</span><span class="text-[#333333]">888888bbbddd888888'''</span><span class="text-[#0f0f0f]">#########</span><span class="text-[#333333]">888888bbb</span><span class="text-[#0f0f0f]">##############################</span>
+<span class="text-[#0f0f0f]">##############################</span><span class="text-[#333333]">ddd888888'''</span><span class="text-[#0f0f0f]">###############</span><span class="text-[#333333]">ddd888PPP'''</span><span class="text-[#0f0f0f]">###</span><span class="text-[#333333]">```???888bbbddd888888'''</span><span class="text-[#0f0f0f]">###</span><span class="text-[#333333]">ddd888888'''</span><span class="text-[#0f0f0f]">######</span><span class="text-[#333333]">888888bbbddd888888'''</span><span class="text-[#0f0f0f]">#########</span><span class="text-[#333333]">888888bbb</span><span class="text-[#0f0f0f]">##############################</span>
+<span class="text-[#0f0f0f]">##############################</span><span class="text-[#333333]">ddd888888'''</span><span class="text-[#0f0f0f]">###############</span><span class="text-[#333333]">ddd888PPP'''</span><span class="text-[#0f0f0f]">###</span><span class="text-[#333333]">```???888bbbddd888888'''</span><span class="text-[#0f0f0f]">###</span><span class="text-[#333333]">ddd888888'''</span><span class="text-[#0f0f0f]">######</span><span class="text-[#333333]">888888bbbddd888888'''</span><span class="text-[#0f0f0f]">#########</span><span class="text-[#333333]">888888bbb</span><span class="text-[#0f0f0f]">##############################</span>
+<span class="text-[#0f0f0f]">##########################################################################################################################################################################################</span>
+<span class="text-[#0f0f0f]">##########################################################################################################################################################################################</span>
+{% endraw %}</pre>
+            <div class="ascii-flare"></div>
+        </div>
+    </footer>
+
+    <!-- Contact Popup Modal -->
+    <div id="contact-popup" class="fixed inset-0 z-[100] hidden flex items-center justify-center pointer-events-none opacity-0 transition-opacity duration-300">
+        <!-- Backdrop -->
+        <div id="contact-popup-backdrop" class="absolute inset-0 bg-obsidian/90 backdrop-blur-md pointer-events-auto cursor-crosshair"></div>
+        
+        <!-- Card -->
+        <div class="relative w-full max-w-xl mx-6 bg-carbon border border-graphite p-8 lg:p-12 pointer-events-auto transform translate-y-8 transition-transform duration-500" id="contact-popup-card">
+            <!-- Close button -->
+            <button id="contact-popup-close" class="absolute top-6 right-6 text-muted hover:text-alert transition-colors text-xl leading-none">✕</button>
+            
+            <!-- Header -->
+            <div class="mb-12">
+                <span class="font-tech text-muted text-xs uppercase tracking-widest mb-4 block">Get in touch</span>
+                <h3 class="font-modius text-4xl lg:text-5xl text-signal leading-tight">Let's talk about<br>your project.</h3>
+            </div>
+
+            <!-- Contact methods -->
+            <div class="flex flex-col gap-4">
+                <!-- Email -->
+                <a href="mailto:heurtaux.romain@gmail.com" class="group flex items-center gap-6 p-6 border border-graphite bg-obsidian hover:border-uv transition-colors">
+                    <span class="font-tech text-muted text-xs">01</span>
+                    <div class="flex flex-col flex-1">
+                        <span class="font-tech text-signal text-sm uppercase tracking-widest mb-1">Email</span>
+                        <span class="text-steel font-reading text-sm">heurtaux.romain@gmail.com</span>
+                    </div>
+                    <span class="text-muted group-hover:text-uv transition-colors font-tech">→</span>
+                </a>
+                
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/romain-heurtaux-5a33822a1" target="_blank" rel="noopener" class="group flex items-center gap-6 p-6 border border-graphite bg-obsidian hover:border-uv transition-colors">
+                    <span class="font-tech text-muted text-xs">02</span>
+                    <div class="flex flex-col flex-1">
+                        <span class="font-tech text-signal text-sm uppercase tracking-widest mb-1">LinkedIn</span>
+                        <span class="text-steel font-reading text-sm">Romain Heurtaux</span>
+                    </div>
+                    <span class="text-muted group-hover:text-uv transition-colors font-tech">→</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/dot-matrix.js') }}"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var wrapper = document.getElementById("matrix-wrapper");
+            var canvas = document.getElementById("matrix-canvas");
+            var state = null;
+            var ctx = canvas ? canvas.getContext("2d") : null;
+
+            function init() {
+                if (window.innerWidth >= 768 && canvas) { // md breakpoint
+                    state = DotMatrix.init(canvas, wrapper);
+                }
+            }
+
+            function loop(time) {
+                if (state && window.innerWidth >= 768) {
+                    DotMatrix.draw(ctx, state.dots, state.width, state.height, time);
+                }
+                requestAnimationFrame(loop);
+            }
+
+            window.addEventListener("resize", init);
+            init();
+            requestAnimationFrame(loop);
+
+            // Contact Popup Logic
+            const triggers = document.querySelectorAll('.contact-trigger');
+            const popup = document.getElementById('contact-popup');
+            const backdrop = document.getElementById('contact-popup-backdrop');
+            const closeBtn = document.getElementById('contact-popup-close');
+            const card = document.getElementById('contact-popup-card');
+
+            function openContact(e) {
+                if (e) e.preventDefault();
+                popup.classList.remove('hidden');
+                requestAnimationFrame(() => {
+                    popup.classList.remove('opacity-0');
+                    card.classList.remove('translate-y-8');
+                });
+            }
+
+            function closeContact() {
+                popup.classList.add('opacity-0');
+                card.classList.add('translate-y-8');
+                setTimeout(() => {
+                    popup.classList.add('hidden');
+                }, 300);
+            }
+
+            triggers.forEach(t => t.addEventListener('click', openContact));
+            closeBtn.addEventListener('click', closeContact);
+            backdrop.addEventListener('click', closeContact);
+
+            // ASCII Scrambler Logic (Unified)
+            const pre = document.getElementById('ascii-pre');
+            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&*<>\\][/#######\\\\\\\\////';
+            
+            if (pre) {
+                const textNodes = [];
+                const walker = document.createTreeWalker(pre, NodeFilter.SHOW_TEXT, null, false);
+                let node;
+                while(node = walker.nextNode()) {
+                    textNodes.push({
+                        node: node,
+                        originalText: node.nodeValue,
+                        currentText: node.nodeValue.split(''),
+                        // #333333 is the text, #0f0f0f is the background
+                        isForeground: node.parentElement && node.parentElement.classList.contains('text-[#333333]')
+                    });
+                }
+                
+                const gridMap = [];
+                let currentRow = 0;
+                let currentCol = 0;
+                for(let info of textNodes) {
+                    for(let i=0; i<info.originalText.length; i++) {
+                        const char = info.originalText[i];
+                        if(char === '\n') {
+                            currentRow++;
+                            currentCol = 0;
+                        } else {
+                            if(!gridMap[currentRow]) gridMap[currentRow] = [];
+                            gridMap[currentRow][currentCol] = { info: info, index: i };
+                            currentCol++;
+                        }
+                    }
+                }
+                
+                let isHovering = false;
+                let mouseCol = -1;
+                let mouseRow = -1;
+                
+                setInterval(() => {
+                    // Reset all characters to original
+                    for(let info of textNodes) {
+                        for(let i = 0; i < info.originalText.length; i++) {
+                            info.currentText[i] = info.originalText[i];
+                        }
+                    }
+                    
+                    // 1. Global slow scramble (only on foreground letters)
+                    for(let info of textNodes) {
+                        if(info.isForeground) {
+                            for(let i = 0; i < info.originalText.length; i++) {
+                                if (info.originalText[i] !== '\n' && Math.random() < 0.04) { // 4% chance per frame
+                                    info.currentText[i] = chars[Math.floor(Math.random() * chars.length)];
+                                }
+                            }
+                        }
+                    }
+                    
+                    // 2. Mouse scramble (applies to everything under the cursor)
+                    if(isHovering && mouseCol >= 0 && mouseRow >= 0) {
+                        const radiusW = 6;
+                        const radiusH = 3;
+                        for(let r = mouseRow - radiusH; r <= mouseRow + radiusH; r++) {
+                            for(let c = mouseCol - radiusW; c <= mouseCol + radiusW; c++) {
+                                const dist = Math.pow((c - mouseCol)/radiusW, 2) + Math.pow((r - mouseRow)/radiusH, 2);
+                                if(dist <= 1.0) {
+                                    const cell = gridMap[r]?.[c];
+                                    if(cell) {
+                                        cell.info.currentText[cell.index] = chars[Math.floor(Math.random() * chars.length)];
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                    // Commit to DOM
+                    for(let info of textNodes) {
+                        const newText = info.currentText.join('');
+                        if(newText !== info.node.nodeValue) {
+                            info.node.nodeValue = newText;
+                        }
+                    }
+                }, 50); // 20 frames per second
+                
+                pre.addEventListener('mousemove', (e) => {
+                    const rect = pre.getBoundingClientRect();
+                    const cols = 186;
+                    const rows = 16;
+                    const colWidth = rect.width / cols;
+                    const rowHeight = rect.height / rows;
+                    
+                    mouseCol = Math.floor((e.clientX - rect.left) / colWidth);
+                    mouseRow = Math.floor((e.clientY - rect.top) / rowHeight);
+                    isHovering = true;
+                });
+                
+                pre.addEventListener('mouseleave', () => {
+                    isHovering = false;
+                });
+            }
+        });
+    </script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block title %}Moi{% endblock %}
+
+{% block content %}
+<section class="pt-12 pb-24 px-6 lg:px-24 bg-black text-steel min-h-screen">
+    <div class="max-w-4xl mx-auto">
+        <div class="flex flex-col md:flex-row gap-12 items-center mb-24">
+            <img src="{{ url_for('static', filename='Graphical elements/SVG/LoopholeWhite.svg') }}" class="w-32 h-32 animate-spin-slow">
+            <h1 class="text-6xl lg:text-8xl font-modius uppercase leading-none text-signal">Romain <br><span class="text-muted">HEURTAUX</span></h1>
+        </div>
+
+        <div class="mb-16">
+            <h2 class="text-3xl lg:text-4xl font-modius text-signal mb-8">MON PARCOURS</h2>
+            <p class="text-xl text-steel leading-relaxed">
+                Mon nom est Romain Heurtaux et je suis un étudiant en informatique passionné par le développement web et la création de projets innovants. 
+                Depuis petit j'ai toujours touché d'une manière ou d'une autre à l'informatique. C'est donc pour moi une passion que j'aimerais retransmettre 
+                dans mes projets afin de pouvoir fournir le meilleur de moi même.
+            </p>
+        </div>
+
+        <!-- Parcours -->
+        <div class="mb-24">
+            <h2 class="text-3xl font-modius mb-12 text-signal">Mon parcours</h2>
+            <div class="space-y-12 border-l border-graphite pl-8">
+                <div class="relative">
+                    <div class="absolute -left-[37px] top-0 w-4 h-4 bg-carbon border border-graphite rounded-none"></div>
+                    <p class="text-xl font-bold text-signal">Collège Jules Ferry</p>
+                    <p class="text-steel">2017-2021 - Brevet des Collèges, mention Très Bien</p>
+                </div>
+                <div class="relative">
+                    <div class="absolute -left-[37px] top-0 w-4 h-4 bg-carbon border border-graphite rounded-none"></div>
+                    <p class="text-xl font-bold text-signal">Lycée Louis Armand</p>
+                    <p class="text-steel">2021-2024 - Baccalauréat, mention Très Bien</p>
+                    <p class="text-muted text-xs uppercase tracking-widest mt-1">Spécialité Mathématiques, Anglais, Sciences du Numérique et de l'Informatique</p>
+                </div>
+                <div class="relative">
+                    <div class="absolute -left-[37px] top-0 w-4 h-4 bg-carbon border border-graphite rounded-none"></div>
+                    <p class="text-xl font-bold text-signal">Sorbonne Paris Nord (IUT Villetaneuse)</p>
+                    <p class="text-steel">2024-... - BUT Informatique, en cours d'obtention</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compétences -->
+        <div class="mb-24">
+            <h2 class="text-3xl font-modius mb-8 text-signal">Mes compétences</h2>
+            <div class="flex flex-wrap gap-3">
+                {% set techs = ["HTML/CSS/JS", "React", "Flask", "Python", "Java", "SQL", "Tailwind CSS", "GSAP", "Git/Github", "Graphic Design", "Photography"] %}
+                {% for tech in techs %}
+                <span class="px-4 py-2 bg-carbon border border-graphite rounded-none text-xs uppercase tracking-widest text-muted hover:text-signal hover:border-signal transition-colors cursor-crosshair">{{ tech }}</span>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .animate-spin-slow {
+        animation: spin 20s linear infinite;
+    }
+    @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+</style>
+{% endblock %}
