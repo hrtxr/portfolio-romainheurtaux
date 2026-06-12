@@ -27,7 +27,7 @@
             </div>
 
             <!-- Project Details Text -->
-            <div class="mb-16">
+            <div>
                 <h1 class="text-4xl lg:text-6xl font-modius mb-8 text-signal">{{ project.title }}</h1>
                 <p class="text-xl text-steel leading-relaxed">
                     {{ project.full_description }}
@@ -36,12 +36,18 @@
         </div>
 
         <!-- TECHNOLOGIES UTILISÉS -->
-        <div class="mt-24 text-left">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-modius text-signal mb-16 uppercase break-words hyphens-auto w-full">TECHNOLOGIES UTILISÉS</h2>
+        <div class="mt-8 text-left">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-modius text-signal mb-8 uppercase break-words hyphens-auto w-full">TECHNOLOGIES UTILISÉS</h2>
             
             <div class="flex justify-start items-center gap-8 mb-16 flex-wrap">
                 {% for icon in project.tech_icons %}
-                <i class="{{ icon }} text-6xl lg:text-8xl text-steel hover:text-signal transition-colors drop-shadow-lg"></i>
+                    {% if icon.startswith('devicon-') %}
+                        {% set tech = icon.split('-')[1] %}
+                        {% set filename = icon | replace('devicon-', '') ~ '.svg' %}
+                        <div class="w-16 h-16 lg:w-20 lg:h-20 bg-steel hover:bg-signal transition-colors drop-shadow-lg {{ icon }}" style="-webkit-mask-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/{{ tech }}/{{ filename }}'); -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat; mask-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/{{ tech }}/{{ filename }}'); mask-size: contain; mask-repeat: no-repeat;" title="{{ tech }}"></div>
+                    {% else %}
+                        <i class="{{ icon }} text-6xl lg:text-8xl text-steel hover:text-signal transition-colors drop-shadow-lg"></i>
+                    {% endif %}
                 {% endfor %}
             </div>
 
@@ -49,6 +55,19 @@
             <a href="{{ project.github_url }}" target="_blank" class="inline-block px-8 py-4 bg-signal text-obsidian font-bold text-lg rounded-xl shadow-2xl hover:scale-105 transition-transform mb-4">
                 Télécharger le projet
             </a>
+            {% endif %}
+            {% if project.id == 'soundstream_s3' %}
+            <a href="{{ url_for('main.portfolio_universitaire') }}" id="univ-btn" class="inline-flex items-center justify-center sm:ml-4 px-8 py-4 ring-2 ring-inset ring-signal text-signal font-bold text-lg text-center rounded-xl shadow-2xl hover:bg-signal hover:text-obsidian hover:scale-105 transition-all mb-4">
+                Page universitaire
+            </a>
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    const univBtn = document.getElementById('univ-btn');
+                    if (univBtn && univBtn.previousElementSibling && univBtn.previousElementSibling.tagName === 'A') {
+                        univBtn.style.width = univBtn.previousElementSibling.offsetWidth + 'px';
+                    }
+                });
+            </script>
             {% endif %}
         </div>
 
