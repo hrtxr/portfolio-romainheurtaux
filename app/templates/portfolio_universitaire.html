@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}Portfolio Universitaire - Évaluation{% endblock %}
+
+{% block content %}
+<section class="pt-12 pb-24 px-6 lg:px-24 bg-black text-steel min-h-screen">
+    <div class="max-w-7xl mx-auto">
+        <div class="mb-16 border-b border-graphite pb-8">
+            <h1 class="text-5xl lg:text-7xl font-modius uppercase leading-none text-signal mb-4">Portfolio <span class="text-muted">Universitaire</span></h1>
+            <p class="text-xl text-steel leading-relaxed max-w-3xl">
+                Bienvenue sur la section d'évaluation académique. Cette page présente rigoureusement les compétences acquises, les tâches réalisées et les preuves associées pour les projets (SAÉ) du BUT Informatique.
+            </p>
+        </div>
+
+        <!-- Racine React pour AcademicTables -->
+        <div id="academic-react-root"></div>
+    </div>
+</section>
+
+<!-- Inclusion de React et Babel via CDN -->
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<!-- Import du composant React -->
+<script type="text/babel" src="{{ url_for('static', filename='js/AcademicTables.jsx') }}"></script>
+
+<!-- Injection des données JSON depuis Flask vers React -->
+<script type="text/babel">
+    const academicData = {{ data | tojson | safe }};
+    
+    // Attendre que le composant window.AcademicTables soit disponible
+    const initReact = () => {
+        if (window.AcademicTables) {
+            const root = ReactDOM.createRoot(document.getElementById('academic-react-root'));
+            root.render(<window.AcademicTables data={academicData} />);
+        } else {
+            setTimeout(initReact, 100);
+        }
+    };
+    
+    initReact();
+</script>
+{% endblock %}

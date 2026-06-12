@@ -48,11 +48,17 @@ def create_app() -> Flask:
     force_https = os.environ.get("FORCE_HTTPS", "False").lower() == "true"
     
     csp = {
-        'default-src': ["'self'", 'https:', 'data:'],
-        'script-src': ["'self'", 'https:', "'unsafe-inline'", "'unsafe-eval'"],
-        'style-src': ["'self'", 'https:', "'unsafe-inline'"],
-        'img-src': ["'self'", 'https:', 'data:'],
-        'font-src': ["'self'", 'https:', 'data:']
+        'default-src': ["'self'"],
+        'script-src': [
+            "'self'", 
+            "https://unpkg.com", 
+            "https://cdn.tailwindcss.com", 
+            "'unsafe-inline'", 
+            "'unsafe-eval'"
+        ],
+        'style-src': ["'self'", "'unsafe-inline'", "https://cdn.jsdelivr.net"],
+        'img-src': ["'self'", "data:", "https:"],
+        'font-src': ["'self'", "data:"]
     }
     
     Talisman(

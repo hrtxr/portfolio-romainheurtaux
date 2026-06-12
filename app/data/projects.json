@@ -1,156 +1,430 @@
 [
   {
-    "id": "portfolio",
-    "title": "#Portfolio",
-    "short_description": "Portfolio sur lequel vous vous baladez actuellement ;)",
-    "full_description": "Ce portfolio a été conçu pour présenter mes projets et compétences de manière moderne et interactive. Initialement développé en HTML/CSS/JS Vanilla, il a été refondu vers une architecture Flask + React pour plus de modularité. Il utilise GSAP pour les animations et Tailwind CSS pour le design.",
-    "technologies": ["Flask", "React", "Tailwind CSS", "GSAP", "No-Build"],
-    "tech_icons": ["vscode", "python", "react", "tailwindcss"],
-    "tech_used": ["Python/Flask", "React", "Tailwind CSS", "GSAP"],
-    "tech_mastered": ["HTML/CSS/JS", "React", "Tailwind CSS"],
-    "improvements": "Mise en place d'un CMS headless pour gérer les projets sans toucher au code source.",
-    "github_url": "https://github.com/hrtxr/portfolio-romainheurtaux",
-    "image_url": "Graphical elements/photos/PortfolioWbst.JPG",
-    "featured": true
+    "id": "soundstream_s3",
+    "title": "#S3.01 & #S4.01 - SoundStream",
+    "short_description": "Plateforme web de diffusion musicale et de supervision (V2)",
+    "full_description": "Projet de groupe (SA\u00c9 S301) consistant \u00e0 d\u00e9velopper une application web de diffusion musicale continue pour des organisations (campus, gares, etc.). La plateforme inclut un syst\u00e8me de supervision des lecteurs, la gestion des playlists de secours, l'insertion de messages publicitaires et urgents, ainsi que la refonte compl\u00e8te de l'architecture r\u00e9seau dans sa version V2.",
+    "technologies": [
+      "Python",
+      "Flask",
+      "MPD/MPC",
+      "R\u00e9seau",
+      "Antigravity IDE"
+    ],
+    "tech_icons": [
+      "devicon-python-plain",
+      "devicon-flask-original",
+      "devicon-linux-plain",
+      "devicon-git-plain",
+      "icon-antigravity"
+    ],
+    "tech_used": [
+      "Python 3",
+      "Flask",
+      "MPC",
+      "API REST",
+      "Antigravity IDE (IA)"
+    ],
+    "tech_mastered": [
+      "D\u00e9veloppement Web backend (Flask)",
+      "Gestion de flux audio (MPC)",
+      "Architecture r\u00e9seau et r\u00e9silience",
+      "Pair-programming IA (Antigravity)"
+    ],
+    "improvements": "Refonte de l'architecture r\u00e9seau (V2) pour corriger les probl\u00e8mes de la version initiale et garantir la continuit\u00e9 de service hors-ligne.",
+    "github_url": "https://github.com/kenshivagabond/SoundStreamV2",
+    "image_url": "Graphical elements/photos/Darken/S201.JPG",
+    "featured": true,
+    "academic_details": {
+      "objectives": [
+        "D\u00e9velopper une application web compl\u00e8te de diffusion et supervision",
+        "G\u00e9rer un projet en \u00e9quipe de bout en bout (C5 & C6)",
+        "Garantir la continuit\u00e9 de service (r\u00e9silience r\u00e9seau/\u00e9lectrique)"
+      ],
+      "main_tasks": [
+        "D\u00e9veloppement du syst\u00e8me de supervision (\u00e9tat, synchro, alertes)",
+        "Recueil des besoins clients (User Stories, Cahier des charges)",
+        "D\u00e9veloppement de la diffusion (musique, pubs, messages urgents)"
+      ],
+      "secondary_tasks": [
+        "Cr\u00e9ation de maquettes et wireframes",
+        "Planification du projet (Fiche de route, RACI, Feuilles de temps)",
+        "Tests des sc\u00e9narios de secours (coupures)"
+      ],
+      "skills_acquired": [
+        "C2 : D\u00e9veloppement d'applications (Architecture V2)",
+        "C4 : Gestion des donn\u00e9es (Historique de diffusion)",
+        "C5 : Conduite de projet et recueil de besoins",
+        "C6 : Travail en \u00e9quipe et communication"
+      ],
+      "skill_evidence": [
+        "D\u00e9p\u00f4t GitHub contenant l'application fonctionnelle",
+        "Livrables de gestion de projet (Cahier des charges, RACI, User Stories)",
+        "D\u00e9monstration des sc\u00e9narios de secours et de la supervision"
+      ]
+    },
+    "category": "Universitaire"
   },
   {
-    "id": "morpyon",
-    "title": "#MorPy0n",
-    "short_description": "Morpion en console python fait de zéro",
-    "full_description": "MorPy0n est un jeu de morpion (Tic-Tac-Toe) classique développé en Python. Il se joue directement dans la console et a été réalisé pour mettre en pratique les bases du langage, notamment les boucles, les conditions et la gestion des entrées utilisateur.",
-    "technologies": ["Python"],
-    "tech_icons": ["vscode", "python"],
-    "tech_used": ["Python 3", "Fonctions natives"],
-    "tech_mastered": ["Bases de l'algorithmique", "Boucles", "Conditions"],
-    "improvements": "Ajouter une interface graphique avec Tkinter ou Pygame. Créer une IA invincible avec Minimax.",
-    "github_url": "https://github.com/hrtxr/MorPy0n",
-    "image_url": "Graphical elements/photos/Morpy0n.JPG",
-    "featured": true
-  },
-  {
-    "id": "chifupy",
-    "title": "#ChifuPy",
-    "short_description": "Chifumi en console python réalisé en programmation orientée objet",
-    "full_description": "ChifuPy est une version du célèbre jeu Pierre-Feuille-Ciseaux implémentée en Python en utilisant le paradigme de la Programmation Orientée Objet (POO). Ce projet a permis de structurer la logique de jeu via des classes et des objets pour une meilleure maintenabilité.",
-    "technologies": ["Python", "POO"],
-    "tech_icons": ["vscode", "python"],
-    "tech_used": ["Python 3", "Programmation Orientée Objet"],
-    "tech_mastered": ["Classes & Objets", "Encapsulation", "Méthodes magiques"],
-    "improvements": "Implémentation de design patterns plus complexes et ajout d'un mode multijoueur réseau.",
-    "github_url": "https://github.com/hrtxr/ChifuPy",
-    "image_url": "Graphical elements/photos/Chifumi.JPG",
-    "featured": true
-  },
-  {
-    "id": "mobilite",
-    "title": "#Projet Mobilités",
-    "short_description": "Analyse de données sur les mobilités via Python et SQL",
-    "full_description": "Ce projet traite de l'analyse des données de transport et de mobilité. Il combine l'utilisation de Python pour le traitement des données et SQL pour la gestion des bases de données. L'objectif était de dégager des statistiques pertinentes sur les flux de déplacement.",
-    "technologies": ["Python", "SQL", "Matplotlib"],
-    "tech_icons": ["vscode", "python", "mysql", "jupyter"],
-    "tech_used": ["Python", "Pandas", "Matplotlib", "SQL"],
-    "tech_mastered": ["Requêtes SQL", "Analyse de données", "Visualisation"],
-    "improvements": "Création d'un dashboard interactif avec Dash ou Streamlit.",
-    "github_url": "https://github.com/hrtxr/Projet-Mobilite",
-    "image_url": "Graphical elements/photos/ProjetMobilite.JPG",
-    "featured": true
-  },
-  {
-    "id": "sae101",
-    "title": "#S1.01 - Implémentation",
-    "short_description": "SAÉ implémentation, utilisation du Python",
-    "full_description": "Première Situation d'Apprentissage et d'Évaluation (SAÉ) du BUT Informatique. Ce projet consistait à implémenter une solution algorithmique complète en Python pour répondre à un cahier des charges précis, en mettant l'accent sur la qualité du code et les tests.",
-    "technologies": ["Python", "Algorithmique"],
-    "tech_icons": ["vscode", "python", "markdown"],
-    "tech_used": ["Python", "Tests unitaires", "Git"],
-    "tech_mastered": ["Algorithmie de base", "Qualité de code"],
-    "improvements": "Tests automatisés plus poussés avec pytest.",
+    "id": "sae204",
+    "title": "#S2.04 - Base de donn\u00e9es",
+    "short_description": "Exploitation d'une base de donn\u00e9es",
+    "full_description": "Exploitation avanc\u00e9e d'une base de donn\u00e9es avec des requ\u00eates SQL complexes, la gestion des droits d'acc\u00e8s, et le d\u00e9veloppement de scripts d'interaction avec la base depuis une application.",
+    "technologies": [
+      "SQL",
+      "Base de donn\u00e9es",
+      "Scripting"
+    ],
+    "tech_icons": [
+      "devicon-mysql-original",
+      "devicon-python-plain"
+    ],
+    "tech_used": [
+      "SQL Avanc\u00e9",
+      "Python",
+      "Connecteurs DB"
+    ],
+    "tech_mastered": [
+      "Jointures complexes",
+      "Transactions",
+      "Scripts d'import/export"
+    ],
+    "improvements": "Optimisation des temps de requ\u00eate via l'ajout d'index judicieux.",
     "github_url": "#",
-    "image_url": "Graphical elements/photos/Darken/S101.JPG",
-    "featured": false
+    "image_url": "Graphical elements/photos/Darken/S204.JPG",
+    "featured": false,
+    "category": "Universitaire"
   },
   {
-    "id": "sae102",
-    "title": "#S1.02 - Algorithmique",
-    "short_description": "SAÉ comparaison d'algorithmes en Python",
-    "full_description": "Étude et comparaison d'algorithmes de tri et de recherche. L'objectif était d'analyser la complexité temporelle et spatiale de différentes solutions algorithmiques pour un problème donné.",
-    "technologies": ["Python", "Algorithmique", "Complexité"],
-    "tech_icons": ["vscode", "python", "markdown", "jupyter"],
-    "tech_used": ["Python", "Librairie python time & math", "Jupyter Notebook", "Markdown"],
-    "tech_mastered": ["Python", "Librairie python time & math", "Jupyter Notebook", "Markdown"],
-    "improvements": "Optimisation bien plus poussée de certains algorithmes car beaucoup se ressemblaient voir présence de redondance de code.\nMeilleure lecture du sujet.\nMeilleure gestion du travail en équipe",
+    "id": "sae203",
+    "title": "#S2.03 - Installation de services",
+    "short_description": "Installation de services r\u00e9seau",
+    "full_description": "D\u00e9ploiement et configuration de diff\u00e9rents services r\u00e9seau sur des machines virtuelles Linux. Mise en place de serveurs Web, DNS, DHCP et s\u00e9curisation des \u00e9changes.",
+    "technologies": [
+      "Linux",
+      "R\u00e9seau",
+      "Administration syst\u00e8me"
+    ],
+    "tech_icons": [
+      "devicon-linux-plain",
+      "devicon-bash-plain",
+      "devicon-nginx-original"
+    ],
+    "tech_used": [
+      "Linux Debian",
+      "Apache/Nginx",
+      "DNS Bind9"
+    ],
+    "tech_mastered": [
+      "Configuration de services Linux",
+      "Gestion des permissions"
+    ],
+    "improvements": "Mise en place d'un firewall strict (iptables/ufw) et monitoring avec Grafana.",
     "github_url": "#",
-    "image_url": "Graphical elements/photos/Darken/S102.JPG",
-    "featured": false
+    "image_url": "Graphical elements/photos/Darken/S203.JPG",
+    "featured": false,
+    "category": "Universitaire"
+  },
+  {
+    "id": "sae201",
+    "title": "#S2.01 - D\u00e9veloppement Orient\u00e9 Objets",
+    "short_description": "D\u00e9veloppement d'une application avec IHM",
+    "full_description": "D\u00e9veloppement complet d'une application Java avec interface graphique (JavaFX). L'accent a \u00e9t\u00e9 mis sur les bonnes pratiques de la Programmation Orient\u00e9e Objet (POO) et le pattern MVC.",
+    "technologies": [
+      "Java",
+      "JavaFX",
+      "POO",
+      "MVC"
+    ],
+    "tech_icons": [
+      "devicon-java-plain",
+      "devicon-git-plain"
+    ],
+    "tech_used": [
+      "Java 17",
+      "JavaFX",
+      "SceneBuilder"
+    ],
+    "tech_mastered": [
+      "POO avanc\u00e9e",
+      "Pattern MVC",
+      "Gestion des \u00e9v\u00e9nements"
+    ],
+    "improvements": "Am\u00e9lioration du design de l'IHM et int\u00e9gration d'une base de donn\u00e9es locale.",
+    "github_url": "#",
+    "image_url": "Graphical elements/photos/Darken/S201.JPG",
+    "featured": false,
+    "academic_details": {
+      "objectives": [
+        "Concevoir une application Java avec IHM",
+        "Respecter le paradigme POO et l'architecture MVC"
+      ],
+      "main_tasks": [
+        "Conception UML",
+        "D\u00e9veloppement de l'interface graphique (JavaFX)",
+        "Impl\u00e9mentation de la logique m\u00e9tier"
+      ],
+      "secondary_tasks": [
+        "Gestion des \u00e9v\u00e9nements",
+        "Tests basiques"
+      ],
+      "skills_acquired": [
+        "Programmation Orient\u00e9e Objet avanc\u00e9e",
+        "Pattern MVC",
+        "Ma\u00eetrise de JavaFX"
+      ],
+      "skill_evidence": [
+        "Code source structur\u00e9 en packages (Mod\u00e8le, Vue, Contr\u00f4leur)",
+        "Interface r\u00e9active et fonctionnelle d\u00e9montr\u00e9e lors de la soutenance"
+      ]
+    },
+    "category": "Universitaire"
+  },
+  {
+    "id": "sae104",
+    "title": "#S1.04 - Bases de donn\u00e9es",
+    "short_description": "Cr\u00e9ation d'une base de donn\u00e9es",
+    "full_description": "Conception et impl\u00e9mentation d'une base de donn\u00e9es relationnelle. Inclut le mod\u00e8le conceptuel des donn\u00e9es (MCD), le mod\u00e8le logique (MLD) et les requ\u00eates SQL de cr\u00e9ation et d'interrogation.",
+    "technologies": [
+      "SQL",
+      "Mod\u00e9lisation",
+      "SGBD"
+    ],
+    "tech_icons": [
+      "devicon-mysql-original",
+      "devicon-postgresql-plain"
+    ],
+    "tech_used": [
+      "SQL",
+      "MCD/MLD",
+      "SGBD Relationnel"
+    ],
+    "tech_mastered": [
+      "Mod\u00e9lisation conceptuelle",
+      "Requ\u00eates DDL et DML"
+    ],
+    "improvements": "Passage sur un SGBD plus robuste et mise en place de proc\u00e9dures stock\u00e9es.",
+    "github_url": "#",
+    "image_url": "Graphical elements/photos/Darken/S104.JPG",
+    "featured": false,
+    "category": "Universitaire"
   },
   {
     "id": "sae103",
     "title": "#S1.03 - Architecture logicielle",
     "short_description": "Installation d'un poste de travail",
-    "full_description": "Projet de configuration et d'installation d'un environnement de travail. Comprend la mise en place de l'OS, des outils de développement et la sécurisation basique du poste.",
-    "technologies": ["Système", "Réseau"],
-    "tech_icons": ["linux", "bash"],
-    "tech_used": ["Linux", "Ligne de commande", "VirtualBox"],
-    "tech_mastered": ["Installation OS", "Configuration réseau de base"],
+    "full_description": "Projet de configuration et d'installation d'un environnement de travail. Comprend la mise en place de l'OS, des outils de d\u00e9veloppement et la s\u00e9curisation basique du poste.",
+    "technologies": [
+      "Syst\u00e8me",
+      "R\u00e9seau"
+    ],
+    "tech_icons": [
+      "devicon-linux-plain",
+      "devicon-bash-plain"
+    ],
+    "tech_used": [
+      "Linux",
+      "Ligne de commande",
+      "VirtualBox"
+    ],
+    "tech_mastered": [
+      "Installation OS",
+      "Configuration r\u00e9seau de base"
+    ],
     "improvements": "Automatisation avec des scripts Bash ou Ansible.",
     "github_url": "#",
     "image_url": "Graphical elements/photos/Darken/S103.JPG",
-    "featured": false
+    "featured": false,
+    "category": "Universitaire"
   },
   {
-    "id": "sae104",
-    "title": "#S1.04 - Bases de données",
-    "short_description": "Création d'une base de données",
-    "full_description": "Conception et implémentation d'une base de données relationnelle. Inclut le modèle conceptuel des données (MCD), le modèle logique (MLD) et les requêtes SQL de création et d'interrogation.",
-    "technologies": ["SQL", "Modélisation", "SGBD"],
-    "tech_icons": ["mysql", "postgresql"],
-    "tech_used": ["SQL", "MCD/MLD", "SGBD Relationnel"],
-    "tech_mastered": ["Modélisation conceptuelle", "Requêtes DDL et DML"],
-    "improvements": "Passage sur un SGBD plus robuste et mise en place de procédures stockées.",
+    "id": "sae102",
+    "title": "#S1.02 - Algorithmique",
+    "short_description": "SA\u00c9 comparaison d'algorithmes en Python",
+    "full_description": "\u00c9tude et comparaison d'algorithmes de tri et de recherche. L'objectif \u00e9tait d'analyser la complexit\u00e9 temporelle et spatiale de diff\u00e9rentes solutions algorithmiques pour un probl\u00e8me donn\u00e9.",
+    "technologies": [
+      "Python",
+      "Algorithmique",
+      "Complexit\u00e9"
+    ],
+    "tech_icons": [
+      "devicon-python-plain",
+      "devicon-markdown-original",
+      "devicon-jupyter-plain"
+    ],
+    "tech_used": [
+      "Python",
+      "Librairie python time & math",
+      "Jupyter Notebook",
+      "Markdown"
+    ],
+    "tech_mastered": [
+      "Python",
+      "Librairie python time & math",
+      "Jupyter Notebook",
+      "Markdown"
+    ],
+    "improvements": "Optimisation bien plus pouss\u00e9e de certains algorithmes car beaucoup se ressemblaient voir pr\u00e9sence de redondance de code.\nMeilleure lecture du sujet.\nMeilleure gestion du travail en \u00e9quipe",
     "github_url": "#",
-    "image_url": "Graphical elements/photos/Darken/S104.JPG",
-    "featured": false
+    "image_url": "Graphical elements/photos/Darken/S102.JPG",
+    "featured": false,
+    "category": "Universitaire"
   },
   {
-    "id": "sae201",
-    "title": "#S2.01 - Développement Orienté Objets",
-    "short_description": "Développement d'une application avec IHM",
-    "full_description": "Développement complet d'une application Java avec interface graphique (JavaFX). L'accent a été mis sur les bonnes pratiques de la Programmation Orientée Objet (POO) et le pattern MVC.",
-    "technologies": ["Java", "JavaFX", "POO", "MVC"],
-    "tech_icons": ["java", "vscode"],
-    "tech_used": ["Java 17", "JavaFX", "SceneBuilder"],
-    "tech_mastered": ["POO avancée", "Pattern MVC", "Gestion des événements"],
-    "improvements": "Amélioration du design de l'IHM et intégration d'une base de données locale.",
+    "id": "sae101",
+    "title": "#S1.01 - Impl\u00e9mentation",
+    "short_description": "SA\u00c9 impl\u00e9mentation, utilisation du Python",
+    "full_description": "Premi\u00e8re Situation d'Apprentissage et d'\u00c9valuation (SA\u00c9) du BUT Informatique. Ce projet consistait \u00e0 impl\u00e9menter une solution algorithmique compl\u00e8te en Python pour r\u00e9pondre \u00e0 un cahier des charges pr\u00e9cis, en mettant l'accent sur la qualit\u00e9 du code et les tests.",
+    "technologies": [
+      "Python",
+      "Algorithmique"
+    ],
+    "tech_icons": [
+      "devicon-python-plain",
+      "devicon-markdown-original",
+      "devicon-git-plain"
+    ],
+    "tech_used": [
+      "Python",
+      "Tests unitaires",
+      "Git"
+    ],
+    "tech_mastered": [
+      "Algorithmie de base",
+      "Qualit\u00e9 de code"
+    ],
+    "improvements": "Tests automatis\u00e9s plus pouss\u00e9s avec pytest.",
     "github_url": "#",
-    "image_url": "Graphical elements/photos/Darken/S201.JPG",
-    "featured": false
+    "image_url": "Graphical elements/photos/Darken/S101.JPG",
+    "featured": false,
+    "category": "Universitaire"
   },
   {
-    "id": "sae203",
-    "title": "#S2.03 - Installation de services",
-    "short_description": "Installation de services réseau",
-    "full_description": "Déploiement et configuration de différents services réseau sur des machines virtuelles Linux. Mise en place de serveurs Web, DNS, DHCP et sécurisation des échanges.",
-    "technologies": ["Linux", "Réseau", "Administration système"],
-    "tech_icons": ["linux", "bash", "nginx"],
-    "tech_used": ["Linux Debian", "Apache/Nginx", "DNS Bind9"],
-    "tech_mastered": ["Configuration de services Linux", "Gestion des permissions"],
-    "improvements": "Mise en place d'un firewall strict (iptables/ufw) et monitoring avec Grafana.",
-    "github_url": "#",
-    "image_url": "Graphical elements/photos/Darken/S203.JPG",
-    "featured": false
+    "id": "portfolio",
+    "title": "#Portfolio",
+    "short_description": "Portfolio sur lequel vous vous baladez actuellement ;)",
+    "full_description": "Ce portfolio a \u00e9t\u00e9 con\u00e7u pour pr\u00e9senter mes projets et comp\u00e9tences de mani\u00e8re moderne et interactive. Initialement d\u00e9velopp\u00e9 en HTML/CSS/JS Vanilla, il a \u00e9t\u00e9 refondu vers une architecture Flask + React pour plus de modularit\u00e9. Il utilise GSAP pour les animations et Tailwind CSS pour le design.",
+    "technologies": [
+      "Flask",
+      "React",
+      "Tailwind CSS",
+      "GSAP",
+      "No-Build",
+      "Antigravity IDE"
+    ],
+    "tech_icons": [
+      "devicon-python-plain",
+      "devicon-flask-original",
+      "devicon-react-original",
+      "devicon-tailwindcss-original",
+      "devicon-html5-plain",
+      "devicon-css3-plain",
+      "devicon-javascript-plain",
+      "icon-antigravity"
+    ],
+    "tech_used": [
+      "Python/Flask",
+      "React",
+      "Tailwind CSS",
+      "GSAP",
+      "Antigravity IDE (IA)"
+    ],
+    "tech_mastered": [
+      "HTML/CSS/JS",
+      "React",
+      "Tailwind CSS",
+      "Pair-programming IA (Antigravity)"
+    ],
+    "improvements": "Mise en place d'un CMS headless pour g\u00e9rer les projets sans toucher au code source.",
+    "github_url": "https://github.com/hrtxr/portfolio-romainheurtaux",
+    "image_url": "Graphical elements/photos/PortfolioWbst.JPG",
+    "featured": true,
+    "category": "Personnel"
   },
   {
-    "id": "sae204",
-    "title": "#S2.04 - Base de données",
-    "short_description": "Exploitation d'une base de données",
-    "full_description": "Exploitation avancée d'une base de données avec des requêtes SQL complexes, la gestion des droits d'accès, et le développement de scripts d'interaction avec la base depuis une application.",
-    "technologies": ["SQL", "Base de données", "Scripting"],
-    "tech_icons": ["mysql", "python"],
-    "tech_used": ["SQL Avancé", "Python", "Connecteurs DB"],
-    "tech_mastered": ["Jointures complexes", "Transactions", "Scripts d'import/export"],
-    "improvements": "Optimisation des temps de requête via l'ajout d'index judicieux.",
-    "github_url": "#",
-    "image_url": "Graphical elements/photos/Darken/S204.JPG",
-    "featured": false
+    "id": "mobilite",
+    "title": "#Projet Mobilit\u00e9s",
+    "short_description": "Analyse de donn\u00e9es sur les mobilit\u00e9s via Python et SQL",
+    "full_description": "Ce projet traite de l'analyse des donn\u00e9es de transport et de mobilit\u00e9. Il combine l'utilisation de Python pour le traitement des donn\u00e9es et SQL pour la gestion des bases de donn\u00e9es. L'objectif \u00e9tait de d\u00e9gager des statistiques pertinentes sur les flux de d\u00e9placement.",
+    "technologies": [
+      "Python",
+      "SQL",
+      "Matplotlib"
+    ],
+    "tech_icons": [
+      "devicon-python-plain",
+      "devicon-mysql-original",
+      "devicon-pandas-plain",
+      "devicon-jupyter-plain"
+    ],
+    "tech_used": [
+      "Python",
+      "Pandas",
+      "Matplotlib",
+      "SQL"
+    ],
+    "tech_mastered": [
+      "Requ\u00eates SQL",
+      "Analyse de donn\u00e9es",
+      "Visualisation"
+    ],
+    "improvements": "Cr\u00e9ation d'un dashboard interactif avec Dash ou Streamlit.",
+    "github_url": "https://github.com/hrtxr/Projet-Mobilite",
+    "image_url": "Graphical elements/photos/ProjetMobilite.JPG",
+    "featured": true,
+    "category": "Personnel"
+  },
+  {
+    "id": "chifupy",
+    "title": "#ChifuPy",
+    "short_description": "Chifumi en console python r\u00e9alis\u00e9 en programmation orient\u00e9e objet",
+    "full_description": "ChifuPy est une version du c\u00e9l\u00e8bre jeu Pierre-Feuille-Ciseaux impl\u00e9ment\u00e9e en Python en utilisant le paradigme de la Programmation Orient\u00e9e Objet (POO). Ce projet a permis de structurer la logique de jeu via des classes et des objets pour une meilleure maintenabilit\u00e9.",
+    "technologies": [
+      "Python",
+      "POO"
+    ],
+    "tech_icons": [
+      "devicon-python-plain"
+    ],
+    "tech_used": [
+      "Python 3",
+      "Programmation Orient\u00e9e Objet"
+    ],
+    "tech_mastered": [
+      "Classes & Objets",
+      "Encapsulation",
+      "M\u00e9thodes magiques"
+    ],
+    "improvements": "Impl\u00e9mentation de design patterns plus complexes et ajout d'un mode multijoueur r\u00e9seau.",
+    "github_url": "https://github.com/hrtxr/ChifuPy",
+    "image_url": "Graphical elements/photos/Chifumi.JPG",
+    "featured": true,
+    "category": "Personnel"
+  },
+  {
+    "id": "morpyon",
+    "title": "#MorPy0n",
+    "short_description": "Morpion en console python fait de z\u00e9ro",
+    "full_description": "MorPy0n est un jeu de morpion (Tic-Tac-Toe) classique d\u00e9velopp\u00e9 en Python. Il se joue directement dans la console et a \u00e9t\u00e9 r\u00e9alis\u00e9 pour mettre en pratique les bases du langage, notamment les boucles, les conditions et la gestion des entr\u00e9es utilisateur.",
+    "technologies": [
+      "Python"
+    ],
+    "tech_icons": [
+      "devicon-python-plain"
+    ],
+    "tech_used": [
+      "Python 3",
+      "Fonctions natives"
+    ],
+    "tech_mastered": [
+      "Bases de l'algorithmique",
+      "Boucles",
+      "Conditions"
+    ],
+    "improvements": "Ajouter une interface graphique avec Tkinter ou Pygame. Cr\u00e9er une IA invincible avec Minimax.",
+    "github_url": "https://github.com/hrtxr/MorPy0n",
+    "image_url": "Graphical elements/photos/Morpy0n.JPG",
+    "featured": true,
+    "category": "Personnel"
   }
 ]

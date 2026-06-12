@@ -18,6 +18,21 @@
 <script type="text/babel">
     const projects = {{ projects | tojson | safe }};
     const root = ReactDOM.createRoot(document.getElementById('project-gallery-react-root'));
-    root.render(<ProjectGallery projects={projects} category="All" />);
+    
+    const App = () => (
+        <div>
+            <div className="mb-24">
+                <h2 className="text-3xl lg:text-4xl font-modius mb-12 text-signal border-l-4 border-uv pl-4">Projets Universitaires</h2>
+                <ProjectGallery projects={projects} category="Universitaire" />
+            </div>
+            
+            <div className="mb-24">
+                <h2 className="text-3xl lg:text-4xl font-modius mb-12 text-signal border-l-4 border-uv pl-4">Projets Personnels</h2>
+                <ProjectGallery projects={projects} category="Personnel" />
+            </div>
+        </div>
+    );
+    
+    root.render(<App />);
 </script>
 {% endblock %}

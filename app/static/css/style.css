@@ -39,3 +39,19 @@
 .animate-matrix {
     animation: slide-dots 20s linear infinite;
 }
+
+/* Fix visibility for Devicon original black icons on dark backgrounds */
+.devicon-flask-original {
+    filter: invert(1) brightness(2);
+}
+
+/* Custom Icon for Antigravity IDE */
+.icon-antigravity {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-image: url('../Graphical elements/logos/antigravity.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}

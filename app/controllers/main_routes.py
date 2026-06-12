@@ -52,6 +52,20 @@ def project_detail(project_id: str):
     return render_template("project_detail.html", project=project)
 
 
+@main_bp.route("/portfolio-universitaire")
+def portfolio_universitaire():
+    """Render the academic portfolio evaluation page."""
+    import json
+    import os
+    from flask import current_app
+    
+    if not hasattr(current_app, "_academic_cache"):
+        json_path = os.path.join(current_app.root_path, "data", "academic.json")
+        with open(json_path, 'r', encoding='utf-8') as f:
+            current_app._academic_cache = json.load(f)
+            
+    return render_template("portfolio_universitaire.html", data=current_app._academic_cache)
+
 # ---------------------------------------------------------------------------
 # JSON API
 # ---------------------------------------------------------------------------

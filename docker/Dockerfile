@@ -53,9 +53,11 @@ HEALTHCHECK --interval=30s --timeout=5s --start-period=15s --retries=3 \
 
 # ---------- Entrypoint ----------
 CMD ["gunicorn", \
-     "--workers", "4", \
+     "--workers", "2", \
+     "--worker-class", "gthread", \
+     "--threads", "4", \
      "--bind", "0.0.0.0:5000", \
-     "--timeout", "120", \
+     "--timeout", "30", \
      "--log-level", "info", \
      "--access-logfile", "-", \
      "--error-logfile", "-", \

@@ -1,0 +1,77 @@
+{
+  "s3_project": {
+    "title": "Projet n°1 (S3) - SoundStream",
+    "objectives": [
+      "Développer une application web complète de diffusion et supervision",
+      "Gérer un projet en équipe de bout en bout",
+      "Garantir la continuité de service (résilience réseau/électrique)"
+    ],
+    "tasks": {
+      "main": [
+        "Développement du système de supervision (état, synchro, alertes)",
+        "Recueil des besoins clients (User Stories, Cahier des charges)",
+        "Développement de la diffusion (musique, pubs, messages urgents)"
+      ],
+      "secondary": [
+        "Création de maquettes et wireframes",
+        "Planification du projet (Fiche de route, RACI, Feuilles de temps)",
+        "Tests des scénarios de secours (coupures)"
+      ]
+    },
+    "skills": {
+      "technical": [
+        "C2 : Développement d'applications (Architecture V2 Flask)",
+        "C4 : Gestion des données (Historique de diffusion)"
+      ],
+      "transversal": [
+        "C5 : Conduite de projet et recueil de besoins",
+        "C6 : Travail en équipe et communication"
+      ]
+    },
+    "evidence": [
+      "Dépôt GitHub attestant de l'intégration continue",
+      "Livrables de gestion de projet (Cahier des charges, Matrice RACI, User Stories)",
+      "Démonstration validée des scénarios de secours et de la supervision"
+    ],
+    "improvements": [
+      "Mettre en place des tests automatisés E2E (ex: Cypress)",
+      "Optimiser la latence réseau via l'utilisation de WebSockets au lieu du polling"
+    ]
+  },
+  "s4_project": {
+    "title": "Projet n°2 (S4) - Programmation Orientée Objet & Tests",
+    "objectives": [
+      "Concevoir une architecture logicielle modulaire en Java",
+      "Assurer la qualité du code par le Test Driven Development (TDD)"
+    ],
+    "tasks": {
+      "main": [
+        "Implémentation des classes métiers (ex: classe Car, Moteur)",
+        "Rédaction stricte des tests unitaires avec JUnit et Mockito"
+      ],
+      "secondary": [
+        "Génération des rapports de couverture de code (JaCoCo)",
+        "Refactoring pour limiter la dette technique"
+      ]
+    },
+    "skills": {
+      "technical": [
+        "Programmation Orientée Objet avancée (Java)",
+        "Tests unitaires (JUnit 5, Mockito)"
+      ],
+      "transversal": [
+        "Assurance qualité logicielle (QA)",
+        "Rigueur algorithmique"
+      ]
+    },
+    "evidence": [
+      "Rapports d'exécution JUnit attestant que 100% des tests passent",
+      "Couverture de code (Code Coverage) à 100% sur la classe Car démontrable via rapport JaCoCo",
+      "Utilisation avancée de Mockito pour l'isolation des dépendances (Mocks/Stubs)"
+    ],
+    "improvements": [
+      "Étendre la couverture de tests à 100% sur l'ensemble des modules complexes",
+      "Mettre en place un pipeline d'Intégration Continue (GitHub Actions) pour jouer les tests à chaque commit"
+    ]
+  }
+}
