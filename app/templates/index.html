@@ -5,14 +5,14 @@
     <section class="h-[calc(100vh-73px)] flex flex-col justify-center items-start text-left px-6 relative overflow-hidden">
         <div class="z-10">
             <h2 class="text-muted text-xs mb-4 font-mono uppercase tracking-widest">01 PORTFOLIO</h2>
-            <h1 class="text-7xl lg:text-9xl font-modius leading-none mb-4 text-signal">
+            <h1 class="text-5xl md:text-7xl lg:text-9xl font-modius leading-none mb-4 text-signal break-words w-full">
                 Romain <br>
                 <span class="text-outline font-bold text-signal">HEURTAUX</span>
             </h1>
         </div>
         
         <!-- Visible Rotating Logo -->
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 pointer-events-none mix-blend-screen w-[80vw] lg:w-[40vw]">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 pointer-events-none mix-blend-screen w-[95vw] md:w-[80vw] lg:w-[40vw]">
             <img src="{{ url_for('static', filename='Graphical elements/SVG/LoopholeWhite.svg') }}" class="w-full h-full opacity-10 animate-[spin_15s_linear_infinite]">
         </div>
     </section>
@@ -20,12 +20,12 @@
     <!-- A propos Page -->
     <section class="py-24 px-6 lg:px-24 bg-carbon text-steel border-y border-graphite">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-modius mb-12 text-signal">// À Propos</h2>
+            <h2 class="text-3xl md:text-4xl font-modius mb-12 text-signal break-words">// À Propos</h2>
             <div class="flex flex-col lg:flex-row gap-12 items-center">
                 <div class="w-64 h-64 flex-shrink-0 rounded-none overflow-hidden border border-graphite grayscale-[10%] contrast-[105%]">
                     <img src="{{ url_for('static', filename='Graphical elements/photos/pp Large.jpeg') }}" class="w-full h-full object-cover">
                 </div>
-                <p class="text-xl leading-relaxed">
+                <p class="text-lg md:text-xl leading-relaxed">
                     Mon nom est Romain Heurtaux, étudiant en BUT Informatique (2ème année) à l'IUT de Villetaneuse. 
                     Passionné par l'informatique depuis mon plus jeune âge, je souhaite aujourd'hui évoluer à la croisée du développement et de la création numérique (audiovisuel et vidéographie).
                     Mon ambition est de faire carrière dans ce domaine passionnant, en alliant conception technique et esthétisme au service de projets innovants.
@@ -37,8 +37,8 @@
     <!-- Projects -->
     <section class="py-24 px-6 lg:px-24 bg-obsidian border-b border-graphite">
         <div class="max-w-6xl mx-auto">
-            <div class="flex justify-between items-end mb-12">
-                <h2 class="text-4xl font-modius text-signal">// Projets</h2>
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 md:gap-0 mb-12">
+                <h2 class="text-3xl md:text-4xl font-modius text-signal break-words">// Projets</h2>
                 <a href="{{ url_for('main.projects') }}" class="text-xs uppercase tracking-widest font-bold border-b border-graphite hover:text-uv hover:border-uv transition-colors pb-1 text-muted">
                     Voir plus de projets
                 </a>
@@ -51,8 +51,8 @@
 
     <!-- Contact CTA -->
     <section class="py-32 px-6 bg-black text-left border-b border-graphite">
-        <h2 class="text-3xl lg:text-5xl font-modius mb-12 text-signal">Intéressé de construire <br> quelque chose ensemble ?</h2>
-        <a href="#" class="contact-trigger inline-block px-12 py-5 bg-signal text-obsidian font-bold rounded-none hover:bg-uv hover:text-signal transition-colors text-sm tracking-widest uppercase">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-modius mb-12 text-signal break-words">Intéressé de construire <br> quelque chose ensemble ?</h2>
+        <a href="#" class="contact-trigger block md:inline-block w-full md:w-auto text-center px-6 md:px-12 py-4 md:py-5 bg-signal text-obsidian font-bold rounded-none hover:bg-uv hover:text-signal transition-colors text-xs md:text-sm tracking-widest uppercase">
             Notre Histoire commence maintenant !
         </a>
     </section>

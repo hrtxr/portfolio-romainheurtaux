@@ -2,7 +2,7 @@ const AcademicTables = ({ data }) => {
   const renderTable = (project) => (
     <div className="mb-16 overflow-x-auto">
       <h3 className="text-2xl font-modius text-signal mb-6">{project.title}</h3>
-      <table className="w-full border border-graphite text-left bg-black text-steel text-sm leading-relaxed">
+      <table className="w-full min-w-[1000px] border border-graphite text-left bg-black text-steel text-sm leading-relaxed">
         <thead>
           <tr className="border-b border-graphite bg-carbon">
             <th className="p-4 border-r border-graphite w-1/5 text-signal font-bold">Objectif(s)</th>

@@ -5,9 +5,9 @@
 {% block content %}
 <section class="pt-12 pb-24 px-6 lg:px-24 bg-black text-steel min-h-screen">
     <div class="max-w-4xl mx-auto">
-        <div class="flex flex-col md:flex-row gap-12 items-center mb-24">
-            <img src="{{ url_for('static', filename='Graphical elements/SVG/LoopholeWhite.svg') }}" class="w-32 h-32 animate-spin-slow">
-            <h1 class="text-6xl lg:text-8xl font-modius uppercase leading-none text-signal">Romain <br><span class="text-muted">HEURTAUX</span></h1>
+        <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-start md:items-center mb-16 md:mb-24">
+            <img src="{{ url_for('static', filename='Graphical elements/SVG/LoopholeWhite.svg') }}" class="w-24 h-24 md:w-32 md:h-32 animate-spin-slow self-center md:self-auto">
+            <h1 class="text-4xl md:text-6xl lg:text-8xl font-modius uppercase leading-none text-signal text-center md:text-left break-words w-full">Romain <br><span class="text-muted">HEURTAUX</span></h1>
         </div>
 
         <!-- Présentation & Logique de Parcours -->
@@ -17,7 +17,7 @@
             <div class="space-y-10 text-lg text-steel leading-relaxed">
                 <!-- Logique du parcours & Évolution -->
                 <div>
-                    <h3 class="text-xl font-bold text-signal mb-4 flex items-center gap-2">
+                    <h3 class="text-xl font-bold text-signal mb-4 flex flex-col md:flex-row items-start md:items-center gap-2">
                         <span class="text-uv">01.</span> Pourquoi l'informatique et évolution de mon parcours
                     </h3>
                     <p>
@@ -28,7 +28,7 @@
 
                 <!-- Projet Professionnel -->
                 <div>
-                    <h3 class="text-xl font-bold text-signal mb-4 flex items-center gap-2">
+                    <h3 class="text-xl font-bold text-signal mb-4 flex flex-col md:flex-row items-start md:items-center gap-2">
                         <span class="text-uv">02.</span> Mon projet professionnel et mes ambitions
                     </h3>
                     <p>
@@ -39,7 +39,7 @@
 
                 <!-- Qualités Personnelles -->
                 <div>
-                    <h3 class="text-xl font-bold text-signal mb-4 flex items-center gap-2">
+                    <h3 class="text-xl font-bold text-signal mb-4 flex flex-col md:flex-row items-start md:items-center gap-2">
                         <span class="text-uv">03.</span> Mes qualités personnelles
                     </h3>
                     <p>
@@ -54,7 +54,7 @@
 
                 <!-- Bilan des SAÉ du S1 et S2 -->
                 <div>
-                    <h3 class="text-xl font-bold text-signal mb-4 flex items-center gap-2">
+                    <h3 class="text-xl font-bold text-signal mb-4 flex flex-col md:flex-row items-start md:items-center gap-2">
                         <span class="text-uv">04.</span> Bilan des SAÉ (S1 & S2)
                     </h3>
                     <p>
@@ -64,7 +64,7 @@
 
                 <!-- Conclusion & Acquis -->
                 <div>
-                    <h3 class="text-xl font-bold text-signal mb-4 flex items-center gap-2">
+                    <h3 class="text-xl font-bold text-signal mb-4 flex flex-col md:flex-row items-start md:items-center gap-2">
                         <span class="text-uv">05.</span> Conclusion & Bilan de l'année 2025-2026
                     </h3>
                     <p>
@@ -77,21 +77,21 @@
         <!-- Parcours -->
         <div class="mb-24">
             <h2 class="text-3xl font-modius mb-12 text-signal">Mon parcours</h2>
-            <div class="space-y-12 border-l border-graphite pl-8">
+            <div class="space-y-12 border-l border-graphite pl-8 ml-2 md:ml-0">
                 <div class="relative">
                     <div class="absolute -left-[37px] top-0 w-4 h-4 bg-carbon border border-graphite rounded-none"></div>
-                    <p class="text-xl font-bold text-signal">Collège Jules Ferry</p>
+                    <p class="text-lg md:text-xl font-bold text-signal">Collège Jules Ferry</p>
                     <p class="text-steel">2017-2021 - Brevet des Collèges, mention Très Bien</p>
                 </div>
                 <div class="relative">
                     <div class="absolute -left-[37px] top-0 w-4 h-4 bg-carbon border border-graphite rounded-none"></div>
-                    <p class="text-xl font-bold text-signal">Lycée Louis Armand</p>
+                    <p class="text-lg md:text-xl font-bold text-signal">Lycée Louis Armand</p>
                     <p class="text-steel">2021-2024 - Baccalauréat, mention Très Bien</p>
                     <p class="text-muted text-xs uppercase tracking-widest mt-1">Spécialité Mathématiques, Anglais, Sciences du Numérique et de l'Informatique</p>
                 </div>
                 <div class="relative">
                     <div class="absolute -left-[37px] top-0 w-4 h-4 bg-carbon border border-graphite rounded-none"></div>
-                    <p class="text-xl font-bold text-signal">Sorbonne Paris Nord (IUT Villetaneuse)</p>
+                    <p class="text-lg md:text-xl font-bold text-signal">Sorbonne Paris Nord (IUT Villetaneuse)</p>
                     <p class="text-steel">2024-... - BUT Informatique, en cours d'obtention</p>
                 </div>
             </div>

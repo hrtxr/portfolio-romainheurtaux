@@ -5,7 +5,7 @@
 {% block content %}
     <section class="pt-12 pb-24 px-6 lg:px-24 bg-black text-steel min-h-screen">
         <div class="max-w-6xl mx-auto">
-            <h1 class="text-6xl lg:text-8xl font-modius mb-16 text-left text-signal break-words w-full">Projects</h1>
+            <h1 class="text-4xl md:text-6xl lg:text-8xl font-modius mb-16 text-left text-signal break-words w-full">Projects</h1>
             
             <!-- React Root -->
             <div id="project-gallery-react-root"></div>
@@ -22,12 +22,12 @@
     const App = () => (
         <div>
             <div className="mb-24">
-                <h2 className="text-3xl lg:text-4xl font-modius mb-12 text-signal border-l-4 border-uv pl-4">Projets Universitaires</h2>
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-modius mb-12 text-signal border-l-4 border-uv pl-4 break-words">Projets Universitaires</h2>
                 <ProjectGallery projects={projects} category="Universitaire" />
             </div>
             
             <div className="mb-24">
-                <h2 className="text-3xl lg:text-4xl font-modius mb-12 text-signal border-l-4 border-uv pl-4">Projets Personnels</h2>
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-modius mb-12 text-signal border-l-4 border-uv pl-4 break-words">Projets Personnels</h2>
                 <ProjectGallery projects={projects} category="Personnel" />
             </div>
         </div>
