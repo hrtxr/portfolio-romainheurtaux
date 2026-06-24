@@ -54,11 +54,12 @@ def create_app() -> Flask:
             "https://unpkg.com", 
             "https://cdn.tailwindcss.com", 
             "'unsafe-inline'", 
-            "'unsafe-eval'"
+            "'unsafe-eval'",
+            "https://cdnjs.cloudflare.com"
         ],
         'style-src': ["'self'", "'unsafe-inline'", "https://cdn.jsdelivr.net"],
         'img-src': ["'self'", "data:", "https:"],
-        'font-src': ["'self'", "data:"]
+        'font-src': ["'self'", "data:", "https://cdn.jsdelivr.net"]
     }
     
     Talisman(
