@@ -26,15 +26,21 @@ def _load_projects() -> List[Dict]:
     Returns an empty list on any I/O or parse error.
     """
     json_path = os.path.join(current_app.root_path, "data", "projects.json")
+    
+    # Fallback paths for Docker and local dev if root_path is weird
+    if not os.path.exists(json_path):
+        alt_path = "/app/app/data/projects.json"
+        if os.path.exists(alt_path):
+            json_path = alt_path
+    
     try:
         with open(json_path, "r", encoding="utf-8") as fh:
-            return json.load(fh)
-    except FileNotFoundError:
-        logger.error("projects.json not found at %s", json_path)
-    except json.JSONDecodeError as exc:
-        logger.error("Failed to parse projects.json: %s", exc)
-    except OSError as exc:
-        logger.error("Could not read projects.json: %s", exc)
+            data = json.load(fh)
+            print(f"DEBUG: Successfully loaded {len(data)} projects from {json_path}")
+            return data
+    except Exception as exc:
+        print(f"CRITICAL ERROR LOADING PROJECTS from {json_path}: {exc}")
+        logger.error("Error loading projects: %s", exc)
     return []
 
 
