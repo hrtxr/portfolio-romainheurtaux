@@ -42,6 +42,21 @@ const ProjectCard = ({ project }) => {
                 <div className="absolute inset-0 bg-obsidian/40 hover:bg-void/80 transition-colors duration-300 flex flex-col justify-end p-6 text-signal">
                     <h3 className="font-modius text-xl mb-1">{project.title}</h3>
                     <p className="text-steel text-xs uppercase tracking-widest font-tech line-clamp-2">{project.short_description}</p>
+                    
+                    {project.technologies && project.technologies.length > 0 && (
+                        <div className="flex flex-wrap gap-2 mt-3">
+                            {project.technologies.slice(0, 3).map((tech, index) => (
+                                <span key={index} className="px-2 py-1 bg-carbon/80 backdrop-blur-sm border border-graphite text-[10px] uppercase tracking-widest text-muted">
+                                    {tech}
+                                </span>
+                            ))}
+                            {project.technologies.length > 3 && (
+                                <span className="px-2 py-1 bg-carbon/80 backdrop-blur-sm border border-graphite text-[10px] uppercase tracking-widest text-muted">
+                                    +{project.technologies.length - 3}
+                                </span>
+                            )}
+                        </div>
+                    )}
                 </div>
             </div>
         </a>
