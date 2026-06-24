@@ -23,10 +23,10 @@
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
 <!-- Import du composant React -->
-<script type="text/babel" src="{{ url_for('static', filename='js/AcademicTables.jsx') }}"></script>
+<script type="text/babel" data-presets="env-react-classic" src="{{ url_for('static', filename='js/AcademicTables.jsx') }}"></script>
 
 <!-- Injection des données JSON depuis Flask vers React -->
-<script type="text/babel">
+<script type="text/babel" data-presets="env-react-classic">
     const academicData = {{ data | tojson | safe }};
     
     // Attendre que le composant window.AcademicTables soit disponible
